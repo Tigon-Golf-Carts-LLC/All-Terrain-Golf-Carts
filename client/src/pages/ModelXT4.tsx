@@ -194,8 +194,8 @@ export default function ModelXT4() {
       <div className="min-h-screen pt-20">
         <section className="py-8 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-            <div className="sticky top-24">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+            <div className="sticky top-20 lg:top-24 z-50 bg-background pb-4 lg:pb-0">
               <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 rounded-2xl p-4 lg:p-8 relative overflow-hidden">
                 <img
                   src={colorImages[selectedColor]}
@@ -204,7 +204,7 @@ export default function ModelXT4() {
                   data-testid="img-xt4-main"
                 />
               </div>
-              <div className="mt-6">
+              <div className="mt-4 lg:mt-6">
                 <p className="text-sm text-muted-foreground text-center mb-3">Select Color</p>
                 <ColorSwatches
                   model="xt4"
