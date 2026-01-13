@@ -1,0 +1,187 @@
+# ============================================================
+# ALL Terrain Golf Carts - Comprehensive Crawler Permissions
+# 50+ Crawler Types with Explicit Access Rights
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## CRAWLER ACCESS DECLARATION
+
+This document provides EXPLICIT PERMISSIONS for 50+ crawler types.
+ALL listed crawlers have UNRESTRICTED ACCESS to all website content.
+
+## SEARCH ENGINE CRAWLERS
+
+### Google Suite
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| Googlebot | FULL | Main web indexing |
+| Googlebot-Image | FULL | Image search |
+| Googlebot-Video | FULL | Video search |
+| Googlebot-News | FULL | Google News |
+| Googlebot-Mobile | FULL | Mobile indexing |
+| Google-Extended | FULL | AI/Gemini training |
+| AdsBot-Google | FULL | Ad quality |
+| Storebot-Google | FULL | Shopping |
+| GoogleOther | FULL | Other services |
+
+### Microsoft/Bing Suite
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| Bingbot | FULL | Main web indexing |
+| BingPreview | FULL | Preview generation |
+| MSNBot | FULL | Legacy crawler |
+| AdIdxBot | FULL | Ad indexing |
+
+### Other Search Engines
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| Slurp | FULL | Yahoo search |
+| DuckDuckBot | FULL | DuckDuckGo search |
+| Baiduspider | FULL | Baidu (China) |
+| YandexBot | FULL | Yandex (Russia) |
+| Sogou | FULL | Sogou (China) |
+| Exabot | FULL | Exalead search |
+| Qwantify | FULL | Qwant search |
+
+## AI & MACHINE LEARNING CRAWLERS
+
+### Large Language Models
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| GPTBot | FULL | OpenAI GPT training |
+| ChatGPT-User | FULL | ChatGPT browsing |
+| anthropic-ai | FULL | Anthropic Claude |
+| Claude-Web | FULL | Claude browsing |
+| Google-Extended | FULL | Gemini training |
+| CCBot | FULL | Common Crawl |
+| PerplexityBot | FULL | Perplexity AI |
+| YouBot | FULL | You.com AI |
+| cohere-ai | FULL | Cohere AI |
+| Bytespider | FULL | ByteDance AI |
+| Applebot-Extended | FULL | Apple AI/Siri |
+
+## SOCIAL MEDIA CRAWLERS
+
+### Meta Platforms
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| facebookexternalhit | FULL | Facebook sharing |
+| Facebot | FULL | Facebook crawling |
+| FacebookBot | FULL | Facebook indexing |
+
+### Other Social
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| Twitterbot | FULL | Twitter/X cards |
+| LinkedInBot | FULL | LinkedIn previews |
+| Pinterest | FULL | Pinterest pins |
+| Pinterestbot | FULL | Pinterest crawling |
+| Slackbot | FULL | Slack previews |
+| Slackbot-LinkExpanding | FULL | Slack links |
+| Discordbot | FULL | Discord embeds |
+| TelegramBot | FULL | Telegram previews |
+| WhatsApp | FULL | WhatsApp previews |
+| vkShare | FULL | VK sharing |
+| redditbot | FULL | Reddit previews |
+| Embedly | FULL | Embed generation |
+
+## SEO & ANALYTICS CRAWLERS
+
+### SEO Tools
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| AhrefsBot | FULL | Ahrefs analysis |
+| SemrushBot | FULL | Semrush analysis |
+| MJ12bot | FULL | Majestic SEO |
+| DotBot | FULL | Moz/Dotbot |
+| rogerbot | FULL | Moz crawling |
+| MozBot | FULL | Moz analysis |
+| Screaming Frog | FULL | SEO Spider |
+| SEOkicks | FULL | SEO analysis |
+| sistrix | FULL | SISTRIX analysis |
+| BLEXBot | FULL | Backlink analysis |
+| DataForSeoBot | FULL | DataForSEO |
+| serpstatbot | FULL | Serpstat |
+
+## ARCHIVING & RESEARCH CRAWLERS
+
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| ia_archiver | FULL | Internet Archive |
+| archive.org_bot | FULL | Wayback Machine |
+| ResearchBot | FULL | Academic research |
+| PetalBot | FULL | Petal/Huawei |
+
+## E-COMMERCE CRAWLERS
+
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| ShopBot | FULL | Shopping comparison |
+| PriceGrabber | FULL | Price comparison |
+| BizRate | FULL | Product reviews |
+| Shopify | FULL | Shopify integration |
+| GoogleShopping | FULL | Google Shopping |
+
+## ACCESSIBILITY & VOICE CRAWLERS
+
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| Applebot | FULL | Siri/Spotlight |
+| Applebot-Extended | FULL | Apple AI |
+| AccessibilityBot | FULL | A11y testing |
+| ScreenReaderBot | FULL | Screen reader |
+| VoiceBot | FULL | Voice assistants |
+
+## NEWS & CONTENT AGGREGATORS
+
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| GoogleNews | FULL | Google News |
+| BingNews | FULL | Bing News |
+| Flipboard | FULL | Flipboard |
+| Feedly | FULL | RSS aggregation |
+
+## MONITORING & TESTING
+
+| Bot Name | Access | Purpose |
+|----------|--------|---------|
+| HeadlessChrome | FULL | Testing |
+| PhantomJS | FULL | Testing |
+| Lighthouse | FULL | Performance |
+| UptimeRobot | FULL | Monitoring |
+| Pingdom | FULL | Monitoring |
+
+## ACCESS SPECIFICATIONS
+
+For ALL crawlers listed above:
+
+```
+Access Level: UNRESTRICTED
+Rate Limit: NONE
+Crawl-delay: 0
+Content Access: ALL
+Image Access: YES
+PDF Access: YES
+JavaScript: YES
+API Access: YES
+Robots.txt: PERMISSIVE
+```
+
+## SITEMAP LOCATIONS
+
+Primary: https://allterraingolfcarts.com/sitemap.xml
+
+## TECHNICAL CONTACT
+
+Email: sales@tigongolfcarts.com
+Website: https://allterraingolfcarts.com
+
+## VERIFICATION
+
+This document authorizes the 50+ crawlers listed above.
+Unlisted crawlers are also welcome - contact us if needed.
+
+Last Updated: January 2026
+Status: ACTIVE
+
+# END OF CRAWLER PERMISSIONS

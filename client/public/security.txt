@@ -1,0 +1,32 @@
+# Security Policy
+# ALL Terrain Golf Carts
+# https://allterraingolfcarts.com
+
+Contact: mailto:sales@tigongolfcarts.com
+Expires: 2027-01-13T00:00:00.000Z
+Preferred-Languages: en
+
+# Policy
+# We take security seriously. If you discover a security vulnerability,
+# please report it to us responsibly.
+
+# Reporting
+# Please email security concerns to: sales@tigongolfcarts.com
+# Include as much detail as possible about the vulnerability.
+
+# Response Time
+# We aim to respond to security reports within 48 business hours.
+
+# Scope
+# This security policy applies to:
+# - https://allterraingolfcarts.com
+# - All subdomains
+
+# Out of Scope
+# - Third-party services and integrations
+# - Social engineering attacks
+# - Physical security
+
+# Acknowledgments
+# We appreciate responsible disclosure and will acknowledge
+# security researchers who help us improve our security.

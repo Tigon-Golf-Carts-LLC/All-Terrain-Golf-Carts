@@ -1,0 +1,181 @@
+# ============================================================
+# ALL Terrain Golf Carts - Performance Optimization Guidelines
+# Core Web Vitals & Best Practices
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## CORE WEB VITALS TARGETS
+
+### Largest Contentful Paint (LCP)
+Target: < 2.5 seconds
+Current Focus: Hero image optimization, font loading
+
+### First Input Delay (FID) / Interaction to Next Paint (INP)
+Target: < 100ms (FID) / < 200ms (INP)
+Current Focus: JavaScript optimization, event handling
+
+### Cumulative Layout Shift (CLS)
+Target: < 0.1
+Current Focus: Image dimensions, font loading, dynamic content
+
+## MOBILE-FIRST INDEXING
+
+### Requirements Met:
+- Responsive design for all screen sizes
+- Same content on mobile and desktop
+- Mobile-friendly navigation
+- Touch-optimized interactions
+- Fast mobile loading times
+
+### Mobile Optimizations:
+- Compressed images for mobile networks
+- Lazy loading for below-fold content
+- Minimal JavaScript on initial load
+- Touch targets minimum 44x44px
+
+## PAGE SPEED OPTIMIZATIONS
+
+### HTML
+- Minified HTML output
+- Compressed with Gzip/Brotli
+- Clean semantic structure
+- No render-blocking resources
+
+### CSS
+- TailwindCSS with purging unused styles
+- Critical CSS inlined
+- Async loading for non-critical CSS
+- Minified production builds
+
+### JavaScript
+- Code splitting with Vite
+- Tree shaking for unused code
+- Minified and compressed
+- Deferred loading where possible
+
+### Images
+- WebP format with fallbacks
+- Responsive srcset
+- Lazy loading below fold
+- Optimized compression
+
+### Fonts
+- System font stack fallback
+- font-display: swap
+- Preloaded critical fonts
+- Subset fonts for used characters
+
+## CDN CONFIGURATION
+
+### Recommended Settings:
+- Edge caching enabled
+- Gzip/Brotli compression
+- HTTP/2 or HTTP/3
+- TLS 1.3
+
+### Cache Headers:
+- Static assets: max-age=31536000, immutable
+- HTML: max-age=0, must-revalidate
+- API responses: no-cache or short TTL
+
+## CACHING STRATEGY
+
+### Browser Caching:
+- Images: 1 year
+- CSS/JS: 1 year (versioned)
+- Fonts: 1 year
+- HTML: No cache
+
+### Service Worker:
+- Cache-first for static assets
+- Network-first for API calls
+- Stale-while-revalidate for content
+
+## RENDERING STRATEGY
+
+### Current Implementation:
+- Client-side rendering (CSR) with React
+- Fast initial bundle load
+- Code splitting by route
+
+### Optimizations:
+- Prefetching for anticipated navigation
+- Route-based code splitting
+- Lazy component loading
+
+## LIGHTHOUSE SCORE TARGETS
+
+| Metric | Target | Description |
+|--------|--------|-------------|
+| Performance | 90+ | Core Web Vitals passing |
+| Accessibility | 95+ | WCAG 2.1 AA compliance |
+| Best Practices | 95+ | Modern web standards |
+| SEO | 100 | Full SEO optimization |
+
+## MONITORING TOOLS
+
+### Recommended:
+- Google PageSpeed Insights
+- Chrome Lighthouse
+- WebPageTest
+- Core Web Vitals report (Search Console)
+
+### Metrics to Track:
+- LCP, FID/INP, CLS
+- Time to First Byte (TTFB)
+- Total Blocking Time (TBT)
+- Speed Index
+
+## NETWORK OPTIMIZATION
+
+### Connection Hints:
+- dns-prefetch for external domains
+- preconnect for critical third parties
+- preload for critical resources
+
+### Third-Party Optimization:
+- Async loading for analytics
+- Defer non-critical scripts
+- Self-host critical resources when possible
+
+## RESOURCE BUDGETS
+
+### Recommended Limits:
+- HTML: < 50KB (compressed)
+- CSS: < 100KB (compressed)
+- JavaScript: < 300KB (compressed)
+- Images per page: < 1MB total
+- Total page weight: < 2MB
+
+## AMP CONSIDERATIONS
+
+Currently not implemented. Consider for:
+- Blog/news content
+- Location pages
+- High-traffic mobile content
+
+## PERFORMANCE TESTING SCHEDULE
+
+- Weekly: Lighthouse audits
+- Monthly: Core Web Vitals review
+- Quarterly: Comprehensive performance audit
+- After major changes: Immediate testing
+
+## OPTIMIZATION CHECKLIST
+
+Before Deployment:
+- [ ] Run Lighthouse audit
+- [ ] Check Core Web Vitals
+- [ ] Verify mobile performance
+- [ ] Test on slow connections (3G)
+- [ ] Validate image optimization
+- [ ] Check JavaScript bundle size
+
+## CONTACT
+
+For performance concerns:
+Email: sales@tigongolfcarts.com
+
+Last Updated: January 2026
+
+# END OF PERFORMANCE GUIDELINES

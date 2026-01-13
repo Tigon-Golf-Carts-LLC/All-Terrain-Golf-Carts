@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>All Terrain Golf Carts</ShortName>
+  <Description>Search ALL Terrain Golf Carts for EVolution D-MAX 4X4 golf carts</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/png">https://allterraingolfcarts.com/favicon.png</Image>
+  <Url type="text/html" template="https://allterraingolfcarts.com/?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://allterraingolfcarts.com/opensearch.xml"/>
+  <Language>en-us</Language>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <Developer>ALL Terrain Golf Carts</Developer>
+  <Contact>sales@tigongolfcarts.com</Contact>
+  <LongName>ALL Terrain Golf Carts - Premium 4X4 Electric Golf Carts</LongName>
+  <Tags>golf cart 4x4 electric evolution d-max all terrain</Tags>
+  <SyndicationRight>open</SyndicationRight>
+</OpenSearchDescription>

@@ -1,0 +1,202 @@
+# ============================================================
+# ALL Terrain Golf Carts - Maximum Accessibility Declaration
+# Universal Platform Compatibility & Accessibility
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## ACCESSIBILITY COMMITMENT
+
+ALL Terrain Golf Carts is committed to ensuring maximum accessibility
+for all users, platforms, and assistive technologies.
+
+## UNIVERSAL ACCESS DECLARATION
+
+This website provides:
+✅ UNLIMITED crawling permissions
+✅ COMPLETE indexing authorization
+✅ ZERO access restrictions
+✅ UNIVERSAL platform compatibility
+✅ FULL assistive technology support
+
+## WCAG COMPLIANCE
+
+We strive to meet WCAG 2.1 Level AA guidelines:
+
+### Perceivable
+- Text alternatives for images (alt text)
+- Captions for multimedia content
+- Content adaptable to different presentations
+- Distinguishable content (color contrast)
+
+### Operable
+- Keyboard accessible navigation
+- No time limits on interactions
+- No content that causes seizures
+- Clear navigation and wayfinding
+
+### Understandable
+- Readable and predictable content
+- Input assistance for forms
+- Consistent navigation
+- Error prevention and recovery
+
+### Robust
+- Compatible with assistive technologies
+- Valid HTML markup
+- ARIA landmarks and labels
+- Screen reader optimization
+
+## SCREEN READER COMPATIBILITY
+
+Tested and optimized for:
+- JAWS (Windows)
+- NVDA (Windows)
+- VoiceOver (macOS/iOS)
+- TalkBack (Android)
+- Narrator (Windows)
+- ChromeVox (Chrome)
+- Orca (Linux)
+
+## VOICE ASSISTANT INTEGRATION
+
+Compatible with:
+- Apple Siri
+- Google Assistant
+- Amazon Alexa
+- Microsoft Cortana
+
+## BROWSER COMPATIBILITY
+
+Fully compatible with:
+- Google Chrome (latest 3 versions)
+- Mozilla Firefox (latest 3 versions)
+- Safari (latest 2 versions)
+- Microsoft Edge (latest 2 versions)
+- Opera (latest version)
+- Brave (latest version)
+
+## MOBILE ACCESSIBILITY
+
+- Responsive design for all screen sizes
+- Touch-friendly interface elements
+- Adequate tap targets (minimum 44x44px)
+- Pinch-to-zoom enabled
+- Portrait and landscape orientation support
+
+## ASSISTIVE TECHNOLOGY PERMISSIONS
+
+All assistive technologies have FULL ACCESS:
+- Screen readers
+- Screen magnifiers
+- Speech recognition software
+- Eye tracking systems
+- Switch access devices
+- Braille displays
+- Alternative input devices
+
+## CRAWLER ACCESSIBILITY
+
+All web crawlers have UNRESTRICTED access:
+- Search engine bots
+- AI training systems
+- Accessibility testing tools
+- SEO analysis tools
+- Archive bots
+
+## CONTENT ACCESSIBILITY FEATURES
+
+### Text Content
+- Clear, readable fonts
+- Adequate font sizes (minimum 16px base)
+- Sufficient line height (1.5 minimum)
+- High contrast text (4.5:1 ratio)
+
+### Images
+- Descriptive alt text for all images
+- Decorative images marked appropriately
+- SVG alternatives where applicable
+
+### Links
+- Descriptive link text
+- Focus indicators visible
+- Skip navigation links
+
+### Forms
+- Labeled form fields
+- Error messages clearly identified
+- Required fields marked
+- Input validation with feedback
+
+### Navigation
+- Consistent navigation structure
+- Breadcrumb navigation
+- Site search functionality
+- Sitemap available
+
+## DOCUMENT ACCESSIBILITY
+
+PDF documents include:
+- Tagged structure
+- Alt text for images
+- Proper reading order
+- Searchable text
+
+## COLOR ACCESSIBILITY
+
+- Not relying on color alone for information
+- Sufficient color contrast (WCAG AA)
+- Dark mode support
+- Customizable themes
+
+## KEYBOARD NAVIGATION
+
+- All interactive elements keyboard accessible
+- Logical tab order
+- Visible focus indicators
+- Skip links available
+- No keyboard traps
+
+## TESTING & VALIDATION
+
+Regular accessibility testing includes:
+- Automated testing (Lighthouse, axe)
+- Manual keyboard testing
+- Screen reader testing
+- Color contrast analysis
+- Mobile device testing
+
+## ACCESSIBILITY CONTACT
+
+For accessibility questions or issues:
+Email: sales@tigongolfcarts.com
+Phone: (844) 884-6744
+
+We welcome feedback on improving accessibility.
+
+## CONTINUOUS IMPROVEMENT
+
+We are committed to:
+- Regular accessibility audits
+- User feedback integration
+- Staff accessibility training
+- Technology updates
+- Third-party accessibility reviews
+
+## LEGAL COMPLIANCE
+
+This website aims to comply with:
+- ADA (Americans with Disabilities Act)
+- Section 508 of the Rehabilitation Act
+- WCAG 2.1 Level AA
+- State accessibility requirements
+
+## ACCESSIBILITY STATEMENT
+
+ALL Terrain Golf Carts believes that the internet should be accessible
+to everyone. We continuously work to improve the accessibility of our
+website and welcome suggestions for improvement.
+
+Last Updated: January 2026
+Accessibility Contact: sales@tigongolfcarts.com
+
+# END OF ACCESSIBILITY DECLARATION

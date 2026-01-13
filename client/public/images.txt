@@ -1,0 +1,116 @@
+# ============================================================
+# ALL Terrain Golf Carts - Image Optimization Guidelines
+# Standards for Image SEO & Performance
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## IMAGE OPTIMIZATION STANDARDS
+
+### File Formats
+- Primary: WebP (modern browsers)
+- Fallback: JPEG (photos), PNG (graphics with transparency)
+- Avoid: BMP, TIFF, uncompressed formats
+
+### Compression Guidelines
+- JPEG Quality: 80-85% (balance of quality and size)
+- WebP Quality: 80-85%
+- PNG: Use PNG-8 for simple graphics, PNG-24 for complex
+- Maximum file size: 200KB for product images, 500KB for hero images
+
+### Responsive Images
+- Provide multiple sizes: 480w, 768w, 1024w, 1440w, 2048w
+- Use srcset attribute for responsive delivery
+- Set proper sizes attribute for viewport matching
+
+### Dimensions
+- Product thumbnails: 300x300px
+- Product cards: 600x450px (4:3 ratio)
+- Hero images: 1920x1080px (16:9 ratio)
+- OG images: 1200x630px
+
+## ALT TEXT GUIDELINES
+
+### Product Images
+- Include: Model name, color, key feature
+- Example: "EVolution D-MAX XT4 in Red - 4-Passenger 4X4 Golf Cart"
+
+### Hero/Banner Images
+- Describe scene and purpose
+- Example: "Mountain landscape showcasing 4X4 golf cart terrain capability"
+
+### Icons/Graphics
+- Use aria-hidden if decorative
+- Describe function if interactive
+
+## IMAGE NAMING CONVENTIONS
+
+### Product Images
+Format: {brand}-{model}-{color}-{view}.{ext}
+Examples:
+- evolution-d-max-xt4-red-front.webp
+- evolution-d-max-xt6-blue-side.webp
+- evolution-d-max-xt4-white-interior.webp
+
+### Category Images
+Format: {category}-{descriptor}.{ext}
+Examples:
+- golf-cart-4x4-feature.webp
+- electric-vehicle-charging.webp
+
+## LAZY LOADING
+
+- Apply loading="lazy" to below-fold images
+- Do NOT lazy load above-fold/hero images
+- Use Intersection Observer for advanced lazy loading
+
+## IMAGE SITEMAP
+
+All images included in sitemap.xml with:
+- <image:loc> - Image URL
+- <image:caption> - Descriptive caption
+- <image:title> - Image title
+- <image:geo_location> - Geographic context (if applicable)
+
+## PERFORMANCE TARGETS
+
+- Largest Contentful Paint (LCP): < 2.5s
+- Image load time: < 1s per image
+- Cumulative Layout Shift (CLS): < 0.1
+
+## CDN RECOMMENDATIONS
+
+- Serve images from CDN for faster global delivery
+- Enable Brotli/Gzip compression
+- Set cache headers: max-age=31536000 (1 year)
+- Use immutable cache for versioned assets
+
+## CURRENT IMAGE INVENTORY
+
+### Product Images
+- EVOLUTION_D-MAX_XT4_RED_*.png - XT4 main product image
+- EVOLUTION_D-MAX_XT6_RED_*.png - XT6 main product image
+
+### Stock Images
+- mountain_landscape_*.jpg - Hero background
+
+### Branding
+- favicon.png - Site favicon (192x192)
+- og-image.png - Social sharing image (1200x630)
+
+## ACCESSIBILITY
+
+- All images have alt text
+- Decorative images use role="presentation"
+- Color is not the only means of conveying information
+- Images scale properly at 200% zoom
+
+## COPYRIGHT
+
+All product images are property of EVolution Electric Vehicles
+and ALL Terrain Golf Carts. Usage is authorized for this website only.
+
+Stock images are properly licensed for commercial use.
+
+Last Updated: January 2026
+
+# END OF IMAGE OPTIMIZATION GUIDELINES

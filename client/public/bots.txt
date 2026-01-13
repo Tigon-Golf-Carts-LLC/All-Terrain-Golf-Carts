@@ -1,0 +1,184 @@
+# ============================================================
+# ALL Terrain Golf Carts - Universal Bot Permissions
+# Comprehensive Crawler Access Guidelines
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## BOT ACCESS POLICY
+
+ALL BOTS WELCOME - ZERO RESTRICTIONS
+
+This website grants UNRESTRICTED access to all legitimate web crawlers,
+AI systems, and automated agents. No rate limiting. No access restrictions.
+
+## SEARCH ENGINE BOTS - FULL ACCESS
+
+### Google Bots
+- Googlebot: ALLOWED (main web crawler)
+- Googlebot-Image: ALLOWED (image indexing)
+- Googlebot-Video: ALLOWED (video indexing)
+- Googlebot-News: ALLOWED (news indexing)
+- Googlebot-Mobile: ALLOWED (mobile indexing)
+- Google-Extended: ALLOWED (AI training)
+- Storebot-Google: ALLOWED (shopping)
+- AdsBot-Google: ALLOWED (ad quality)
+
+### Microsoft/Bing Bots
+- Bingbot: ALLOWED (main crawler)
+- BingPreview: ALLOWED (previews)
+- MSNBot: ALLOWED (legacy)
+- AdIdxBot: ALLOWED (ad indexing)
+
+### Yahoo Bots
+- Slurp: ALLOWED (Yahoo crawler)
+- Yahoo-MMCrawler: ALLOWED (multimedia)
+
+### Other Search Engines
+- DuckDuckBot: ALLOWED
+- Baiduspider: ALLOWED (China)
+- YandexBot: ALLOWED (Russia)
+- Sogou: ALLOWED (China)
+- Exabot: ALLOWED
+- Qwantify: ALLOWED
+
+## AI CRAWLERS - FULL ACCESS
+
+### OpenAI
+- GPTBot: ALLOWED (GPT training)
+- ChatGPT-User: ALLOWED (ChatGPT browsing)
+
+### Anthropic
+- anthropic-ai: ALLOWED
+- Claude-Web: ALLOWED
+
+### Google AI
+- Google-Extended: ALLOWED (Gemini/Bard)
+
+### Other AI
+- CCBot: ALLOWED (Common Crawl)
+- PerplexityBot: ALLOWED
+- YouBot: ALLOWED
+- cohere-ai: ALLOWED
+- Bytespider: ALLOWED (ByteDance)
+
+## SOCIAL MEDIA BOTS - FULL ACCESS
+
+### Facebook/Meta
+- facebookexternalhit: ALLOWED
+- Facebot: ALLOWED
+- FacebookBot: ALLOWED
+
+### Twitter/X
+- Twitterbot: ALLOWED
+
+### LinkedIn
+- LinkedInBot: ALLOWED
+
+### Pinterest
+- Pinterest: ALLOWED
+- Pinterestbot: ALLOWED
+
+### Other Social
+- TelegramBot: ALLOWED
+- WhatsApp: ALLOWED
+- Slackbot: ALLOWED
+- Slackbot-LinkExpanding: ALLOWED
+- SkypeUriPreview: ALLOWED
+- vkShare: ALLOWED
+- redditbot: ALLOWED
+- Discordbot: ALLOWED
+- Embedly: ALLOWED
+
+## SEO TOOL BOTS - FULL ACCESS
+
+### Major SEO Tools
+- AhrefsBot: ALLOWED
+- SemrushBot: ALLOWED
+- MJ12bot: ALLOWED (Majestic)
+- DotBot: ALLOWED (Moz)
+- rogerbot: ALLOWED (Moz)
+- Screaming Frog SEO Spider: ALLOWED
+- SEOkicks: ALLOWED
+- sistrix: ALLOWED
+- BLEXBot: ALLOWED
+- DataForSeoBot: ALLOWED
+- serpstatbot: ALLOWED
+- SEMrushBot: ALLOWED
+
+## ARCHIVING BOTS - FULL ACCESS
+
+- ia_archiver: ALLOWED (Internet Archive)
+- archive.org_bot: ALLOWED
+- Wayback Machine: ALLOWED
+
+## E-COMMERCE BOTS - FULL ACCESS
+
+- ShopBot: ALLOWED
+- PriceGrabber: ALLOWED
+- BizRate: ALLOWED
+- Shopify: ALLOWED
+- GoogleShopping: ALLOWED
+
+## ACADEMIC/RESEARCH BOTS - FULL ACCESS
+
+- ResearchBot: ALLOWED
+- PetalBot: ALLOWED
+- Applebot: ALLOWED
+
+## ACCESSIBILITY BOTS - FULL ACCESS
+
+- AccessibilityBot: ALLOWED
+- ScreenReaderBot: ALLOWED
+- VoiceBot: ALLOWED
+- Applebot-Extended: ALLOWED (Siri)
+
+## ANALYTICS BOTS - FULL ACCESS
+
+- HeadlessChrome: ALLOWED
+- PhantomJS: ALLOWED
+- Lighthouse: ALLOWED
+
+## CRAWLING SPECIFICATIONS
+
+Rate Limit: NONE (Crawl freely)
+Crawl-delay: 0 (No delay required)
+Visit Time: ANY (24/7 access)
+Allowed Pages: ALL
+Restricted Pages: NONE
+Sitemap: https://allterraingolfcarts.com/sitemap.xml
+
+## CONTENT TYPES AVAILABLE
+
+- HTML Pages: Full access
+- Images: Full access
+- PDFs: Full access
+- JSON/API: Full access
+- CSS/JS: Full access
+- Video: Full access (if any)
+- XML: Full access
+
+## BOT IDENTIFICATION
+
+Please identify with a standard User-Agent string.
+All legitimate bots are welcome regardless of User-Agent.
+
+## CONTACT FOR BOTS
+
+Technical Contact: sales@tigongolfcarts.com
+Website: https://allterraingolfcarts.com
+Sitemap: https://allterraingolfcarts.com/sitemap.xml
+
+## SUMMARY
+
+✅ ALL search engines welcome
+✅ ALL AI systems welcome
+✅ ALL social bots welcome
+✅ ALL SEO tools welcome
+✅ ALL archiving bots welcome
+✅ Zero rate limiting
+✅ 24/7 access
+✅ Full site access
+
+Last Updated: January 2026
+
+# END OF BOT PERMISSIONS

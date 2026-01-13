@@ -1,0 +1,12 @@
+# ads.txt - Authorized Digital Sellers
+# ALL Terrain Golf Carts
+# https://allterraingolfcarts.com
+
+# This file declares authorized advertising partners.
+# Currently, no programmatic advertising is active on this site.
+
+# Format: <domain>, <publisher_id>, <relationship>, <certification_authority_id>
+
+# Contact for advertising inquiries:
+# Email: sales@tigongolfcarts.com
+# Phone: (844) 884-6744

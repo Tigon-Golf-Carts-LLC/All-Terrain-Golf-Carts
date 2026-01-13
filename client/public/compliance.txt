@@ -1,0 +1,197 @@
+# ============================================================
+# ALL Terrain Golf Carts - Compliance & Standards Documentation
+# Regulatory, Accessibility & Industry Standards
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## PRIVACY & DATA PROTECTION
+
+### GDPR Compliance (EU Visitors)
+- Cookie consent mechanism available
+- Clear privacy policy
+- Right to data access
+- Right to data deletion
+- Data processing transparency
+
+### CCPA Compliance (California)
+- Privacy policy disclosure
+- Opt-out mechanism
+- Data sale disclosure
+- Consumer rights information
+
+### General Privacy Practices
+- No selling of personal data
+- Secure data transmission (HTTPS)
+- Limited data collection
+- Clear data usage policy
+
+## ACCESSIBILITY COMPLIANCE
+
+### WCAG 2.1 Level AA
+This website aims to meet WCAG 2.1 Level AA guidelines:
+
+Perceivable:
+- Text alternatives for non-text content
+- Captions and alternatives for multimedia
+- Content adaptable to different presentations
+- Distinguishable content
+
+Operable:
+- Keyboard accessible
+- Enough time to read content
+- No seizure-inducing content
+- Navigable structure
+
+Understandable:
+- Readable text
+- Predictable functionality
+- Input assistance
+
+Robust:
+- Compatible with assistive technologies
+
+### ADA Compliance
+- Accessible to users with disabilities
+- Alternative access methods
+- Reasonable accommodations
+
+### Section 508 (U.S. Federal)
+- Electronic content accessibility
+- Compatible with assistive technology
+
+## AUTOMOTIVE INDUSTRY STANDARDS
+
+### LSV (Low Speed Vehicle) Compliance
+EVolution D-MAX golf carts meet federal LSV requirements:
+- Maximum speed: 25 MPH
+- DOT-approved lighting
+- Turn signals
+- Side mirrors
+- Three-point seatbelts
+- VIN for registration
+
+### NHTSA Standards
+Products comply with applicable NHTSA regulations:
+- Federal Motor Vehicle Safety Standards (FMVSS)
+- LSV-specific requirements
+
+### State Regulations
+Street-legal requirements vary by state. All products can be
+configured to meet individual state LSV requirements.
+
+## E-COMMERCE COMPLIANCE
+
+### Consumer Protection
+- Clear pricing disclosure
+- No hidden fees
+- Return/refund policy
+- Accurate product descriptions
+
+### Advertising Standards
+- Truthful advertising
+- Substantiated claims
+- Clear disclaimers where needed
+
+### Payment Security
+- Secure checkout process
+- PCI DSS compliance for payments
+- Encrypted data transmission
+
+## ENVIRONMENTAL COMPLIANCE
+
+### EPA Considerations
+- Zero-emission electric vehicles
+- No tailpipe emissions
+- Environmentally friendly operation
+
+### Battery Disposal
+- Proper lithium battery handling
+- Recycling information available
+- Safe disposal guidelines
+
+## INTELLECTUAL PROPERTY
+
+### Trademarks
+- EVolution is a trademark of EVolution Electric Vehicles
+- ALL Terrain Golf Carts is authorized dealer
+
+### Copyright
+- All website content copyright protected
+- Images used with proper licensing
+- Third-party content attributed
+
+## TERMS & CONDITIONS
+
+### Website Use
+- Terms of service applicable
+- User responsibilities
+- Limitation of liability
+
+### Product Sales
+- Sales terms and conditions
+- Warranty information
+- Delivery terms
+
+## ANTI-SPAM COMPLIANCE
+
+### CAN-SPAM Act
+- Clear sender identification
+- Opt-out mechanism
+- Honest subject lines
+- Physical address included
+
+### Email Marketing
+- Permission-based marketing
+- Easy unsubscribe
+- Honor opt-out requests
+
+## DATA SECURITY
+
+### Technical Measures
+- HTTPS encryption
+- Secure hosting
+- Regular security updates
+- Access controls
+
+### Operational Measures
+- Staff training
+- Incident response plan
+- Data backup procedures
+
+## COMPLIANCE CONTACTS
+
+General Inquiries:
+Email: sales@tigongolfcarts.com
+Phone: (844) 884-6744
+
+Privacy Concerns:
+Email: sales@tigongolfcarts.com
+
+Accessibility Issues:
+Email: sales@tigongolfcarts.com
+
+## COMPLIANCE REVIEW SCHEDULE
+
+- Monthly: Security review
+- Quarterly: Accessibility audit
+- Annually: Full compliance review
+- As needed: Regulatory updates
+
+## REGULATORY UPDATES
+
+This document is updated as regulations change.
+Last comprehensive review: January 2026
+
+## DISCLAIMER
+
+This compliance documentation is for informational purposes.
+Consult legal professionals for specific compliance requirements.
+
+ALL Terrain Golf Carts strives to maintain full compliance with
+all applicable laws and regulations. We welcome feedback on
+compliance matters.
+
+Last Updated: January 2026
+Version: 1.0
+
+# END OF COMPLIANCE DOCUMENTATION

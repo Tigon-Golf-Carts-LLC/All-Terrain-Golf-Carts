@@ -1,0 +1,314 @@
+# ============================================================
+# ALL Terrain Golf Carts - Geographic SEO Data
+# Service Areas, Coordinates & Local Keywords
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+## BUSINESS LOCATION
+
+Primary Business: ALL Terrain Golf Carts
+Service Type: Nationwide Delivery
+Phone: (844) 884-6744
+Email: sales@tigongolfcarts.com
+Website: https://allterraingolfcarts.com
+
+## SERVICE COVERAGE
+
+Coverage Area: United States (All 50 States + Territories)
+Delivery: Nationwide Available
+Service Model: Direct-to-customer delivery
+
+## STATE SERVICE AREAS
+
+### Alabama (AL)
+Coordinates: 32.806671, -86.79113
+Major Cities: Birmingham, Montgomery, Huntsville, Mobile
+Keywords: Alabama golf cart, Birmingham golf cart, 4X4 golf cart Alabama
+
+### Alaska (AK)
+Coordinates: 61.370716, -152.404419
+Major Cities: Anchorage, Fairbanks, Juneau, Sitka
+Keywords: Alaska golf cart, Anchorage golf cart, 4X4 golf cart Alaska
+
+### Arizona (AZ)
+Coordinates: 33.729759, -111.431221
+Major Cities: Phoenix, Tucson, Scottsdale, Mesa
+Keywords: Arizona golf cart, Phoenix golf cart, Scottsdale golf cart
+
+### Arkansas (AR)
+Coordinates: 34.969704, -92.373123
+Major Cities: Little Rock, Fort Smith, Fayetteville, Springdale
+Keywords: Arkansas golf cart, Little Rock golf cart, 4X4 golf cart Arkansas
+
+### California (CA)
+Coordinates: 36.116203, -119.681564
+Major Cities: Los Angeles, San Diego, San Francisco, Sacramento
+Keywords: California golf cart, LA golf cart, San Diego golf cart
+
+### Colorado (CO)
+Coordinates: 39.059811, -105.311104
+Major Cities: Denver, Colorado Springs, Aurora, Fort Collins
+Keywords: Colorado golf cart, Denver golf cart, 4X4 golf cart Colorado
+
+### Connecticut (CT)
+Coordinates: 41.597782, -72.755371
+Major Cities: Hartford, New Haven, Bridgeport, Stamford
+Keywords: Connecticut golf cart, Hartford golf cart
+
+### Delaware (DE)
+Coordinates: 39.318523, -75.507141
+Major Cities: Wilmington, Dover, Newark, Middletown
+Keywords: Delaware golf cart, Wilmington golf cart
+
+### Florida (FL)
+Coordinates: 27.766279, -81.686783
+Major Cities: Miami, Orlando, Tampa, Jacksonville
+Keywords: Florida golf cart, Miami golf cart, Orlando golf cart, The Villages golf cart
+
+### Georgia (GA)
+Coordinates: 33.040619, -83.643074
+Major Cities: Atlanta, Savannah, Augusta, Columbus
+Keywords: Georgia golf cart, Atlanta golf cart, Savannah golf cart
+
+### Hawaii (HI)
+Coordinates: 21.094318, -157.498337
+Major Cities: Honolulu, Pearl City, Hilo, Kailua
+Keywords: Hawaii golf cart, Honolulu golf cart, Maui golf cart
+
+### Idaho (ID)
+Coordinates: 44.240459, -114.478828
+Major Cities: Boise, Meridian, Nampa, Idaho Falls
+Keywords: Idaho golf cart, Boise golf cart
+
+### Illinois (IL)
+Coordinates: 40.349457, -88.986137
+Major Cities: Chicago, Aurora, Rockford, Naperville
+Keywords: Illinois golf cart, Chicago golf cart
+
+### Indiana (IN)
+Coordinates: 39.849426, -86.258278
+Major Cities: Indianapolis, Fort Wayne, Evansville, South Bend
+Keywords: Indiana golf cart, Indianapolis golf cart
+
+### Iowa (IA)
+Coordinates: 42.011539, -93.210526
+Major Cities: Des Moines, Cedar Rapids, Davenport, Sioux City
+Keywords: Iowa golf cart, Des Moines golf cart
+
+### Kansas (KS)
+Coordinates: 38.5266, -96.726486
+Major Cities: Wichita, Overland Park, Kansas City, Topeka
+Keywords: Kansas golf cart, Wichita golf cart
+
+### Kentucky (KY)
+Coordinates: 37.66814, -84.670067
+Major Cities: Louisville, Lexington, Bowling Green, Owensboro
+Keywords: Kentucky golf cart, Louisville golf cart
+
+### Louisiana (LA)
+Coordinates: 31.169546, -91.867805
+Major Cities: New Orleans, Baton Rouge, Shreveport, Lafayette
+Keywords: Louisiana golf cart, New Orleans golf cart
+
+### Maine (ME)
+Coordinates: 44.693947, -69.381927
+Major Cities: Portland, Lewiston, Bangor, South Portland
+Keywords: Maine golf cart, Portland golf cart
+
+### Maryland (MD)
+Coordinates: 39.063946, -76.802101
+Major Cities: Baltimore, Columbia, Germantown, Silver Spring
+Keywords: Maryland golf cart, Baltimore golf cart
+
+### Massachusetts (MA)
+Coordinates: 42.230171, -71.530106
+Major Cities: Boston, Worcester, Springfield, Cambridge
+Keywords: Massachusetts golf cart, Boston golf cart, Cape Cod golf cart
+
+### Michigan (MI)
+Coordinates: 43.326618, -84.536095
+Major Cities: Detroit, Grand Rapids, Warren, Ann Arbor
+Keywords: Michigan golf cart, Detroit golf cart
+
+### Minnesota (MN)
+Coordinates: 45.694454, -93.900192
+Major Cities: Minneapolis, St. Paul, Rochester, Bloomington
+Keywords: Minnesota golf cart, Minneapolis golf cart
+
+### Mississippi (MS)
+Coordinates: 32.741646, -89.678696
+Major Cities: Jackson, Gulfport, Southaven, Biloxi
+Keywords: Mississippi golf cart, Jackson golf cart
+
+### Missouri (MO)
+Coordinates: 38.456085, -92.288368
+Major Cities: Kansas City, St. Louis, Springfield, Columbia
+Keywords: Missouri golf cart, St. Louis golf cart
+
+### Montana (MT)
+Coordinates: 46.921925, -110.454353
+Major Cities: Billings, Missoula, Great Falls, Bozeman
+Keywords: Montana golf cart, Billings golf cart
+
+### Nebraska (NE)
+Coordinates: 41.12537, -98.268082
+Major Cities: Omaha, Lincoln, Bellevue, Grand Island
+Keywords: Nebraska golf cart, Omaha golf cart
+
+### Nevada (NV)
+Coordinates: 38.313515, -117.055374
+Major Cities: Las Vegas, Henderson, Reno, North Las Vegas
+Keywords: Nevada golf cart, Las Vegas golf cart
+
+### New Hampshire (NH)
+Coordinates: 43.452492, -71.563896
+Major Cities: Manchester, Nashua, Concord, Derry
+Keywords: New Hampshire golf cart, Manchester golf cart
+
+### New Jersey (NJ)
+Coordinates: 40.298904, -74.521011
+Major Cities: Newark, Jersey City, Paterson, Elizabeth
+Keywords: New Jersey golf cart, Newark golf cart
+
+### New Mexico (NM)
+Coordinates: 34.840515, -106.248482
+Major Cities: Albuquerque, Las Cruces, Rio Rancho, Santa Fe
+Keywords: New Mexico golf cart, Albuquerque golf cart
+
+### New York (NY)
+Coordinates: 42.165726, -74.948051
+Major Cities: New York City, Buffalo, Rochester, Albany
+Keywords: New York golf cart, NYC golf cart, Long Island golf cart
+
+### North Carolina (NC)
+Coordinates: 35.630066, -79.806419
+Major Cities: Charlotte, Raleigh, Greensboro, Durham
+Keywords: North Carolina golf cart, Charlotte golf cart, Pinehurst golf cart
+
+### North Dakota (ND)
+Coordinates: 47.528912, -99.784012
+Major Cities: Fargo, Bismarck, Grand Forks, Minot
+Keywords: North Dakota golf cart, Fargo golf cart
+
+### Ohio (OH)
+Coordinates: 40.388783, -82.764915
+Major Cities: Columbus, Cleveland, Cincinnati, Toledo
+Keywords: Ohio golf cart, Columbus golf cart
+
+### Oklahoma (OK)
+Coordinates: 35.565342, -96.928917
+Major Cities: Oklahoma City, Tulsa, Norman, Broken Arrow
+Keywords: Oklahoma golf cart, Oklahoma City golf cart
+
+### Oregon (OR)
+Coordinates: 44.572021, -122.070938
+Major Cities: Portland, Salem, Eugene, Gresham
+Keywords: Oregon golf cart, Portland golf cart
+
+### Pennsylvania (PA)
+Coordinates: 40.590752, -77.209755
+Major Cities: Philadelphia, Pittsburgh, Allentown, Reading
+Keywords: Pennsylvania golf cart, Philadelphia golf cart, Pittsburgh golf cart
+
+### Rhode Island (RI)
+Coordinates: 41.680893, -71.51178
+Major Cities: Providence, Warwick, Cranston, Pawtucket
+Keywords: Rhode Island golf cart, Providence golf cart
+
+### South Carolina (SC)
+Coordinates: 33.856892, -80.945007
+Major Cities: Charleston, Columbia, North Charleston, Mount Pleasant
+Keywords: South Carolina golf cart, Charleston golf cart, Myrtle Beach golf cart
+
+### South Dakota (SD)
+Coordinates: 44.299782, -99.438828
+Major Cities: Sioux Falls, Rapid City, Aberdeen, Brookings
+Keywords: South Dakota golf cart, Sioux Falls golf cart
+
+### Tennessee (TN)
+Coordinates: 35.747845, -86.692345
+Major Cities: Nashville, Memphis, Knoxville, Chattanooga
+Keywords: Tennessee golf cart, Nashville golf cart
+
+### Texas (TX)
+Coordinates: 31.054487, -97.563461
+Major Cities: Houston, San Antonio, Dallas, Austin
+Keywords: Texas golf cart, Houston golf cart, Dallas golf cart, Austin golf cart
+
+### Utah (UT)
+Coordinates: 40.150032, -111.862434
+Major Cities: Salt Lake City, West Valley City, Provo, West Jordan
+Keywords: Utah golf cart, Salt Lake City golf cart
+
+### Vermont (VT)
+Coordinates: 44.045876, -72.710686
+Major Cities: Burlington, Essex, South Burlington, Colchester
+Keywords: Vermont golf cart, Burlington golf cart
+
+### Virginia (VA)
+Coordinates: 37.769337, -78.169968
+Major Cities: Virginia Beach, Norfolk, Chesapeake, Richmond
+Keywords: Virginia golf cart, Virginia Beach golf cart
+
+### Washington (WA)
+Coordinates: 47.400902, -121.490494
+Major Cities: Seattle, Spokane, Tacoma, Vancouver
+Keywords: Washington golf cart, Seattle golf cart
+
+### West Virginia (WV)
+Coordinates: 38.491226, -80.954453
+Major Cities: Charleston, Huntington, Morgantown, Parkersburg
+Keywords: West Virginia golf cart, Charleston golf cart
+
+### Wisconsin (WI)
+Coordinates: 44.268543, -89.616508
+Major Cities: Milwaukee, Madison, Green Bay, Kenosha
+Keywords: Wisconsin golf cart, Milwaukee golf cart
+
+### Wyoming (WY)
+Coordinates: 42.755966, -107.30249
+Major Cities: Cheyenne, Casper, Laramie, Gillette
+Keywords: Wyoming golf cart, Cheyenne golf cart
+
+## U.S. TERRITORIES
+
+### Puerto Rico (PR)
+Coordinates: 18.220833, -66.590149
+Major Cities: San Juan, Bayamon, Carolina, Ponce
+Keywords: Puerto Rico golf cart, San Juan golf cart
+
+### Guam (GU)
+Coordinates: 13.444304, 144.793731
+Major Cities: Hagatna, Dededo, Tamuning
+Keywords: Guam golf cart
+
+### U.S. Virgin Islands (VI)
+Coordinates: 18.335765, -64.896335
+Major Cities: Charlotte Amalie, Christiansted
+Keywords: Virgin Islands golf cart
+
+### American Samoa (AS)
+Coordinates: -14.270972, -170.132217
+Major Cities: Pago Pago
+Keywords: American Samoa golf cart
+
+### Northern Mariana Islands (MP)
+Coordinates: 17.33083, 145.38469
+Major Cities: Saipan
+Keywords: Saipan golf cart
+
+### Washington D.C. (DC)
+Coordinates: 38.9072, -77.0369
+Keywords: Washington DC golf cart, DC golf cart
+
+## LOCAL SEO SIGNALS
+
+Schema Type: LocalBusiness
+Business Type: Golf Cart Dealer
+Service Radius: Nationwide
+Delivery Available: Yes
+Price Range: $$$$
+
+Last Updated: January 2026
+
+# END OF GEOGRAPHIC SEO DATA

@@ -1,0 +1,38 @@
+/* TEAM */
+Company: ALL Terrain Golf Carts
+Website: https://allterraingolfcarts.com
+Contact: sales@tigongolfcarts.com
+Phone: (844) 884-6744
+Location: United States
+
+/* THANKS */
+Brand Partner: EVolution Electric Vehicles
+Technology: React, TypeScript, Vite, TailwindCSS
+Hosting: Replit
+
+/* SITE */
+Last update: 2026/01/13
+Standards: HTML5, CSS3, ES6+
+Components: React, Shadcn/UI
+Software: Vite, Express.js
+Language: English
+
+/* DESCRIPTION */
+ALL Terrain Golf Carts is an authorized dealer of EVolution D-MAX
+4X4 electric golf carts. We specialize in premium all-terrain
+golf carts featuring dual-motor 4X4 drive systems.
+
+Products:
+- EVolution D-MAX XT4 (4-passenger) - $15,595
+- EVolution D-MAX XT6 (6-passenger) - $17,595
+
+Features:
+- Dual 6.3kW motors (12.6kW total)
+- True 4X4 all-wheel drive
+- 50+ mile range
+- 25 MPH top speed
+- Street-legal LSV capability
+- 24-speaker sound system
+- Built-in refrigerator
+
+Service Area: All 50 U.S. States + Territories

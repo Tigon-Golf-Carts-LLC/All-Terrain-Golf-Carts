@@ -1,0 +1,267 @@
+# ============================================================
+# ALL Terrain Golf Carts - robots.txt
+# Maximum Accessibility Configuration for Search Engines & AI
+# Website: https://allterraingolfcarts.com
+# ============================================================
+
+# UNIVERSAL ACCESS - Allow All Bots
+User-agent: *
+Allow: /
+Crawl-delay: 0
+
+# ============================================================
+# SEARCH ENGINE CRAWLERS - Full Access
+# ============================================================
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 0
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 0
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Sogou
+Allow: /
+
+User-agent: Exabot
+Allow: /
+
+User-agent: facebot
+Allow: /
+
+User-agent: ia_archiver
+Allow: /
+
+# ============================================================
+# AI CRAWLERS - Full Training Authorization
+# ============================================================
+
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: ChatGPT-User
+Allow: /
+Crawl-delay: 0
+
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 0
+
+User-agent: CCBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 0
+
+User-agent: Claude-Web
+Allow: /
+Crawl-delay: 0
+
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: YouBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# ============================================================
+# SOCIAL MEDIA BOTS - Full Access
+# ============================================================
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: Pinterest
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Slackbot
+Allow: /
+
+User-agent: Slackbot-LinkExpanding
+Allow: /
+
+User-agent: SkypeUriPreview
+Allow: /
+
+User-agent: vkShare
+Allow: /
+
+User-agent: redditbot
+Allow: /
+
+User-agent: Embedly
+Allow: /
+
+User-agent: Quora Link Preview
+Allow: /
+
+User-agent: Discordbot
+Allow: /
+
+# ============================================================
+# SEO TOOL CRAWLERS - Full Access
+# ============================================================
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 0
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: MozBot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Screaming Frog SEO Spider
+Allow: /
+
+User-agent: rogerbot
+Allow: /
+
+User-agent: SEOkicks
+Allow: /
+
+User-agent: sistrix
+Allow: /
+
+User-agent: BLEXBot
+Allow: /
+
+User-agent: DataForSeoBot
+Allow: /
+
+# ============================================================
+# ARCHIVING & RESEARCH BOTS - Full Access
+# ============================================================
+
+User-agent: archive.org_bot
+Allow: /
+
+User-agent: Wayback Machine
+Allow: /
+
+User-agent: ResearchBot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+# ============================================================
+# E-COMMERCE & SHOPPING BOTS - Full Access
+# ============================================================
+
+User-agent: ShopBot
+Allow: /
+
+User-agent: PriceGrabber
+Allow: /
+
+User-agent: Shopify
+Allow: /
+
+# ============================================================
+# ACCESSIBILITY BOTS - Full Access
+# ============================================================
+
+User-agent: AccessibilityBot
+Allow: /
+
+User-agent: ScreenReaderBot
+Allow: /
+
+User-agent: VoiceBot
+Allow: /
+
+# ============================================================
+# SITEMAP REFERENCES
+# ============================================================
+
+Sitemap: https://allterraingolfcarts.com/sitemap.xml
+
+# ============================================================
+# ADDITIONAL INFORMATION
+# ============================================================
+# Contact: sales@tigongolfcarts.com
+# Phone: (844) 884-6744
+# Last Updated: 2026-01-13
+# 
+# This robots.txt file grants UNRESTRICTED access to all 
+# legitimate crawlers, AI systems, and indexing bots.
+# We welcome all search engines and AI training systems.
+# ============================================================
