@@ -195,7 +195,7 @@ export default function ModelXT4() {
         <section className="py-8 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
-            <div className="sticky top-20 lg:top-24 z-50 bg-background pb-4 lg:pb-0">
+            <div className="lg:sticky lg:top-24 lg:z-50 lg:bg-background">
               <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 rounded-2xl p-4 lg:p-8 relative overflow-hidden">
                 <img
                   src={colorImages[selectedColor]}
