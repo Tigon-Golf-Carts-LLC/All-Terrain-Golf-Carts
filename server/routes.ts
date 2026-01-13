@@ -5,15 +5,22 @@ import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || "smtp.gmail.com",
-  port: parseInt(process.env.SMTP_PORT || "587"),
-  secure: process.env.SMTP_SECURE === "true",
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+let transporter: nodemailer.Transporter | null = null;
+
+function getTransporter() {
+  if (!transporter) {
+    transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST || "smtp.gmail.com",
+      port: parseInt(process.env.SMTP_PORT || "587"),
+      secure: process.env.SMTP_SECURE === "true",
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+  }
+  return transporter;
+}
 
 async function sendContactEmail(data: {
   firstName: string;
@@ -57,7 +64,7 @@ ${data.message}
 
   const recipients = ["sales@tigongolfcarts.com", "tigongolfcarts@gmail.com"];
 
-  await transporter.sendMail({
+  await getTransporter().sendMail({
     from: process.env.SMTP_FROM || process.env.SMTP_USER,
     to: recipients.join(", "),
     replyTo: data.email,
@@ -71,6 +78,10 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
+  app.get("/api/health", (_req, res) => {
+    res.status(200).json({ status: "ok", timestamp: Date.now() });
+  });
+
   app.post("/api/contact", async (req, res) => {
     try {
       const contactData = {
