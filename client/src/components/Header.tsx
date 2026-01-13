@@ -44,6 +44,7 @@ export function Header() {
     { href: "/", label: "Home" },
     { href: "/evolution-d-max-xt4", label: "D-MAX XT4" },
     { href: "/evolution-d-max-xt6", label: "D-MAX XT6" },
+    { href: "/financing", label: "Financing" },
     { href: "/contact", label: "Contact" },
   ];
 

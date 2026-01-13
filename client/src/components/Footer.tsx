@@ -97,9 +97,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-financing">
-                  Financing Options
-                </a>
+                <Link href="/financing">
+                  <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer" data-testid="link-footer-financing">
+                    Financing
+                  </span>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-warranty">

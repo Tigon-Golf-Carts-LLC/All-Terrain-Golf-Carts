@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import Home from "@/pages/Home";
 import ModelXT4 from "@/pages/ModelXT4";
 import ModelXT6 from "@/pages/ModelXT6";
+import Financing from "@/pages/Financing";
 import Contact from "@/pages/Contact";
 import LocationPage from "@/pages/LocationPage";
 import NotFound from "@/pages/not-found";
@@ -19,6 +20,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/evolution-d-max-xt4" component={ModelXT4} />
       <Route path="/evolution-d-max-xt6" component={ModelXT6} />
+      <Route path="/financing" component={Financing} />
       <Route path="/contact" component={Contact} />
       {locations.map((loc) => (
         <Route key={loc.slug} path={`/${loc.slug}`} component={LocationPage} />
