@@ -17,7 +17,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Premium 4X4 electric golf carts designed for those who demand more. 
+              4X4 All-Terrain electric golf carts designed for those who demand more. 
               Conquer any terrain with style and power.
             </p>
             <div className="flex items-center gap-3 mt-6">
@@ -65,7 +65,7 @@ export function Footer() {
               <li>
                 <Link href="/#capabilities">
                   <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer" data-testid="link-footer-4x4">
-                    4X4 Capabilities
+                    4X4 All-Terrain Capabilities
                   </span>
                 </Link>
               </li>
@@ -115,8 +115,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  123 Golf Cart Lane<br />
-                  Orlando, FL 32801
+                  NATIONWIDE<br />
+                  DELIVERY AVAILABLE
                 </span>
               </li>
               <li className="flex items-center gap-3">

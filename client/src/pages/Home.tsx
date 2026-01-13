@@ -37,7 +37,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
             <div className="text-center lg:text-left order-2 lg:order-1">
               <Badge variant="secondary" className="mb-4">
-                Premium 4X4 Electric Golf Carts
+                4X4 All-Terrain Electric Golf Carts
               </Badge>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight mb-6">
                 All Terrain
@@ -45,7 +45,7 @@ export default function Home() {
                 <span className="text-gradient">Golf Carts</span>
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8">
-                Experience the power of dual-motor 4X4 capability combined with luxury comfort. 
+                Experience the power of dual-motor 4X4 all-terrain capability combined with luxury comfort. 
                 The EVolution D-MAX XT series redefines what a golf cart can do.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -97,11 +97,11 @@ export default function Home() {
           <div className="text-center mb-12 lg:mb-16">
             <Badge variant="outline" className="mb-4">Our Lineup</Badge>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-              Choose Your Adventure
+              All Terrain Golf Cart Models
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Two powerful models designed for different needs. Both equipped with 
-              our legendary 4X4 all-terrain capability.
+              Two powerful golf cart models designed for different needs. Both equipped with 
+              4X4 All-Terrain capability.
             </p>
           </div>
 
@@ -197,7 +197,7 @@ export default function Home() {
                 <span className="text-gradient">Off-Road Excellence</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                The EVolution D-MAX series features an on-demand 4-wheel drive system 
+                All Terrain Golf Carts feature an on-demand 4-wheel drive system 
                 with dual 6.3kW AC motors, delivering unmatched power and traction 
                 across any terrain.
               </p>
@@ -221,7 +221,7 @@ export default function Home() {
               <div className="mt-8">
                 <Link href="/evolution-d-max-xt4">
                   <Button size="lg" className="gap-2" data-testid="button-learn-4x4">
-                    Learn More About 4X4
+                    Learn More About 4X4 All-Terrain Capability
                     <ArrowRight className="w-5 h-5" />
                   </Button>
                 </Link>
@@ -264,7 +264,7 @@ export default function Home() {
               Luxury Meets Capability
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Every D-MAX comes loaded with premium features that elevate your driving experience.
+              All-Terrain Golf Carts come loaded with premium features that elevate your driving experience no matter the terrain.
             </p>
           </div>
 
@@ -313,11 +313,11 @@ export default function Home() {
             </div>
             <div className="relative">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-                Ready to Experience the Difference?
+                Ready to Experience The 4X4 All Terrain Difference?
               </h2>
               <p className="text-lg text-primary-foreground/90 max-w-2xl mx-auto mb-8">
                 Contact us today to schedule a test drive or get a personalized quote 
-                for your new EVolution D-MAX golf cart.
+                for your 4x4 all terrain golf cart.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/contact">
@@ -345,10 +345,10 @@ export default function Home() {
               Nationwide Service
             </Badge>
             <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-              4X4 Golf Carts Available Across the USA
+              4X4 all terrain Golf Carts Available Across the USA
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We deliver EVolution D-MAX 4X4 golf carts to all 50 states and U.S. territories. 
+              We deliver 4X4 all terrain golf carts to all 50 states and U.S. territories. 
               Click your location to learn more.
             </p>
           </div>
