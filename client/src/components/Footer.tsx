@@ -104,6 +104,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog">
+                  <span className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer" data-testid="link-footer-blog">
+                    Blog
+                  </span>
+                </Link>
+              </li>
+              <li>
                 <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors" data-testid="link-footer-warranty">
                   Warranty
                 </a>
