@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+
+import { SITE } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon, Phone } from "lucide-react";
 
@@ -42,8 +44,10 @@ export function Header() {
 
   const navLinks = [
     { href: "/", label: "Home" },
+    { href: "/inventory", label: "Inventory" },
     { href: "/evolution-d-max-xt4", label: "D-MAX XT4" },
     { href: "/evolution-d-max-xt6", label: "D-MAX XT6" },
+    { href: "/guides", label: "Guides" },
     { href: "/financing", label: "Financing" },
     { href: "/contact", label: "Contact" },
   ];
@@ -66,11 +70,11 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" data-testid="link-home-logo">
             <span className="font-bold text-lg lg:text-xl tracking-tight cursor-pointer hover:text-primary transition-colors">
-              All Terrain Golf Carts
+              {SITE.name}
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-5 xl:gap-7">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>
                 <span
@@ -92,15 +96,16 @@ export function Header() {
               size="icon"
               variant="ghost"
               onClick={toggleTheme}
+              aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
               data-testid="button-theme-toggle"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
             
-            <a href="tel:1-844-884-6744" className="hidden lg:block">
+            <a href={SITE.phoneHref} className="hidden lg:block">
               <Button className="gap-2" data-testid="button-call-now-header">
                 <Phone className="w-4 h-4" />
-                Call Now
+                {SITE.phoneDisplay}
               </Button>
             </a>
 
@@ -109,6 +114,8 @@ export function Header() {
               variant="ghost"
               className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
               data-testid="button-mobile-menu"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -135,10 +142,10 @@ export function Header() {
                 </div>
               </Link>
             ))}
-            <a href="tel:1-844-884-6744">
+            <a href={SITE.phoneHref}>
               <Button className="w-full mt-4 gap-2" onClick={() => setIsMenuOpen(false)} data-testid="button-mobile-call-now">
                 <Phone className="w-4 h-4" />
-                Call Now
+                {SITE.phoneDisplay}
               </Button>
             </a>
           </div>

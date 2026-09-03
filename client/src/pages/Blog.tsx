@@ -4,6 +4,8 @@ import { blogPosts } from "@/data/blogPosts";
 import { Card } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 export default function Blog() {
   useEffect(() => {
@@ -23,9 +25,10 @@ export default function Blog() {
 
   return (
     <>
-      <div className="min-h-screen pt-20">
+      <div className="min-h-screen pt-20 pb-24 lg:pb-8">
         <section className="py-12 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Breadcrumbs path="/blog" className="mb-8" />
             <div className="text-center mb-12 lg:mb-16">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 All Terrain Golf Cart <span className="text-primary">Blog</span>
@@ -43,9 +46,10 @@ export default function Blog() {
                     data-testid={`blog-card-${post.id}`}
                   >
                     <div className="aspect-[16/10] overflow-hidden">
-                      <img
-                        src={post.heroImage}
+                      <ResponsiveImage
+                        name={post.heroImage}
                         alt={post.heroAlt}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
                     </div>

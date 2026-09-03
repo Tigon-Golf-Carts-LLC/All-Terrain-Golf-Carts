@@ -1,61 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Per-route head tags (title, description, canonical, OG/Twitter, JSON-LD)
+      are injected here by script/prerender.ts from client/src/seo/routes.ts.
+      Anything below the marker is shared by every page.
+    -->
+    <!--app-head-->
+
+    <meta name="author" content="ALL Terrain Golf Carts" />
+    <meta name="theme-color" content="#f97316" />
+    <meta name="p:domain_verify" content="c0d1a4d2d8cdbe9010c99fc8bde5b827" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="search" type="application/opensearchdescription+xml" title="All Terrain Golf Carts" href="/opensearch.xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      Loaded without blocking the first paint: the stylesheet is fetched as a
+      low-priority resource and promoted to a stylesheet once it arrives. The
+      body already has a system-font fallback stack, and `display=swap` means
+      text is painted immediately and re-rendered when the webfont lands, so a
+      slow or unreachable fonts host cannot hold up First Contentful Paint.
+    -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900&family=Inter:opsz,wght@14..32,400..800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400..900&family=Inter:opsz,wght@14..32,400..800&display=swap"
+      />
+    </noscript>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0EB0R0CN9"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-F0EB0R0CN9');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-F0EB0R0CN9");
     </script>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TCNMK7PS');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TCNMK7PS");
+    </script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>ALL Terrain Golf Carts | Premium 4X4 Electric Golf Carts - EVolution D-MAX XT4 & XT6</title>
-    <meta name="description" content="Discover ALL Terrain Golf Carts featuring EVolution D-MAX XT4 and XT6 models. Premium 4X4 electric golf carts with dual-motor all-wheel drive, street-legal capability, and luxury features. Shop now at allterraingolfcarts.com" />
-    <meta name="keywords" content="4X4 golf cart, all terrain golf cart, EVolution D-MAX XT4, EVolution D-MAX XT6, electric golf cart, street legal golf cart, off-road golf cart, dual motor golf cart, LSV golf cart" />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="ALL Terrain Golf Carts" />
-    <link rel="canonical" href="https://allterraingolfcarts.com" />
-    
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="ALL Terrain Golf Carts | Premium 4X4 Electric Golf Carts" />
-    <meta property="og:description" content="EVolution D-MAX XT4 & XT6 - Premium 4X4 electric golf carts with dual-motor all-wheel drive, street-legal capability, and luxury features." />
-    <meta property="og:url" content="https://allterraingolfcarts.com" />
-    <meta property="og:site_name" content="ALL Terrain Golf Carts" />
-    <meta property="og:image" content="https://allterraingolfcarts.com/og-image.png" />
-    <meta property="og:image:width" content="1024" />
-    <meta property="og:image:height" content="1024" />
-    
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ALL Terrain Golf Carts | Premium 4X4 Electric Golf Carts" />
-    <meta name="twitter:description" content="EVolution D-MAX XT4 & XT6 - Premium 4X4 electric golf carts with dual-motor all-wheel drive." />
-    <meta name="twitter:image" content="https://allterraingolfcarts.com/og-image.png" />
-    
-    <!-- Pinterest domain verification -->
-    <meta name="p:domain_verify" content="c0d1a4d2d8cdbe9010c99fc8bde5b827"/>
-    
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
-    <link rel="search" type="application/opensearchdescription+xml" title="All Terrain Golf Carts" href="/opensearch.xml" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCNMK7PS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TCNMK7PS"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

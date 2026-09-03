@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useLocation, Link } from "wouter";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,175 +19,15 @@ import {
   Phone,
   MapPin
 } from "lucide-react";
-import xt4Image from "@assets/EVOLUTION_D-MAX_XT4_RED_1768250430375.png";
-import xt6Image from "@assets/EVOLUTION_D-MAX_XT6_RED_1768250430374.png";
-import mountainBg from "@assets/stock_images/mountain_landscape_s_e3842dcf.jpg";
 import { getLocationBySlug, LocationData } from "@/data/locations";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { imageUrl } from "@/lib/images";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { SITE } from "@/config/site";
 
-function LocationSchema({ location }: { location: LocationData }) {
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `https://allterraingolfcarts.com/${location.slug}#business`,
-    "name": `All Terrain Golf Carts - ${location.name}`,
-    "description": `Premium EVolution D-MAX 4X4 electric golf carts available in ${location.name}. Dual-motor all-terrain capability, street-legal LSV options, and luxury features.`,
-    "url": `https://allterraingolfcarts.com/${location.slug}`,
-    "telephone": "+1-844-884-6744",
-    "priceRange": "$15,000 - $20,000",
-    "image": "https://allterraingolfcarts.com/og-image.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressRegion": location.abbreviation,
-      "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": location.coordinates.lat,
-      "longitude": location.coordinates.lng
-    },
-    "areaServed": {
-      "@type": location.type === "state" ? "State" : "AdministrativeArea",
-      "name": location.name
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "17:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "09:00",
-        "closes": "17:00"
-      }
-    ],
-    "sameAs": [
-      "https://allterraingolfcarts.com"
-    ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": location.faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://allterraingolfcarts.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": `${location.name}`,
-        "item": `https://allterraingolfcarts.com/${location.slug}`
-      }
-    ]
-  };
-
-  const productSchema = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": `4X4 Golf Carts in ${location.name}`,
-    "description": `Premium EVolution D-MAX 4X4 electric golf carts available for ${location.name} residents. Features dual-motor all-wheel drive, luxury amenities, and street-legal LSV options.`,
-    "brand": {
-      "@type": "Brand",
-      "name": "EVolution Electric Vehicles"
-    },
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "USD",
-      "lowPrice": "15595",
-      "highPrice": "17595",
-      "offerCount": "2",
-      "availability": "https://schema.org/InStock"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "127"
-    }
-  };
-
-  return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-      />
-    </>
-  );
-}
-
-export default function LocationPage() {
-  const [pathname] = useLocation();
-  const slug = pathname.slice(1);
+export default function LocationPage({ slug }: { slug: string }) {
   const location = getLocationBySlug(slug);
 
-  useEffect(() => {
-    if (location) {
-      document.title = `All Terrain Golf Cart in ${location.name} | EVolution D-MAX 4X4`;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', 
-        `Premium 4X4 electric golf carts available in ${location.name}. EVolution D-MAX XT4 and XT6 with dual-motor all-terrain capability, street-legal LSV options. Call (844) 884-6744.`
-      );
-
-      let ogTitle = document.querySelector('meta[property="og:title"]');
-      if (!ogTitle) {
-        ogTitle = document.createElement('meta');
-        ogTitle.setAttribute('property', 'og:title');
-        document.head.appendChild(ogTitle);
-      }
-      ogTitle.setAttribute('content', `All Terrain Golf Cart in ${location.name}`);
-
-      let ogDescription = document.querySelector('meta[property="og:description"]');
-      if (!ogDescription) {
-        ogDescription = document.createElement('meta');
-        ogDescription.setAttribute('property', 'og:description');
-        document.head.appendChild(ogDescription);
-      }
-      ogDescription.setAttribute('content', 
-        `Shop EVolution D-MAX 4X4 golf carts in ${location.name}. Dual-motor power, luxury features, street-legal options available.`
-      );
-    }
-
-    return () => {
-      document.title = 'All Terrain Golf Carts | Premium 4X4 Electric Golf Carts';
-    };
-  }, [location]);
 
   if (!location) {
     return (
@@ -208,12 +47,14 @@ export default function LocationPage() {
 
   return (
     <>
-      <LocationSchema location={location} />
-      <div className="min-h-screen">
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      <div className="min-h-screen pb-24 lg:pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs path={`/${location.slug}`} className="pt-24" />
+        </div>
+        <section className="relative min-h-[85vh] flex items-center pt-8 overflow-hidden">
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${mountainBg})` }}
+            style={{ backgroundImage: `url(${imageUrl("mountain_landscape_s_e3842dcf.jpg", 800)})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background" />
           
@@ -224,7 +65,7 @@ export default function LocationPage() {
                   Serving {location.name}
                 </Badge>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-6">
-                  All Terrain
+                  All Terrain{" "}
                   <br />
                   <span className="text-primary">Golf Carts In {location.name}</span>
                 </h1>
@@ -233,7 +74,7 @@ export default function LocationPage() {
                   The EVolution D-MAX XT series delivers unmatched performance for {location.type === "state" ? "your state's" : "your"} unique terrain.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <a href="tel:1-844-884-6744">
+                  <a href={SITE.phoneHref}>
                     <Button size="lg" className="w-full sm:w-auto gap-2" data-testid="button-call-hero">
                       <Phone className="w-5 h-5" />
                       (844) 884-6744
@@ -264,11 +105,13 @@ export default function LocationPage() {
               
               <div className="relative order-1 lg:order-2">
                 <div className="relative aspect-[4/3] max-w-lg mx-auto lg:max-w-none">
-                  <img
-                    src={xt6Image}
-                    alt={`EVolution D-MAX XT6 4X4 Golf Cart available in ${location.name}`}
+                  <ResponsiveImage
+                    name="EVOLUTION_D-MAX_XT6_RED_1768250430374.png"
+                    alt={`Red EVolution D-MAX XT6 six-passenger 4X4 all terrain golf cart, available in ${location.name}`}
+                    sizes="(min-width: 1024px) 45vw, 90vw"
+                    priority
                     className="w-full h-full object-contain drop-shadow-2xl"
-                    data-testid="img-hero-location"
+                    testId="img-hero-location"
                   />
                 </div>
               </div>
@@ -292,11 +135,12 @@ export default function LocationPage() {
             <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
               <Card className="overflow-hidden group hover-elevate">
                 <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 p-6 relative overflow-hidden">
-                  <img
-                    src={xt4Image}
-                    alt={`EVolution D-MAX XT4 4-Seat Golf Cart for ${location.name}`}
+                  <ResponsiveImage
+                    name="EVOLUTION_D-MAX_XT4_RED_1768250430375.png"
+                    alt={`Red EVolution D-MAX XT4 four-passenger 4X4 all terrain golf cart, delivered to ${location.name}`}
+                    sizes="(min-width: 768px) 45vw, 90vw"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                    data-testid="img-xt4-card"
+                    testId="img-xt4-card"
                   />
                 </div>
                 <div className="p-6 lg:p-8">
@@ -331,11 +175,12 @@ export default function LocationPage() {
 
               <Card className="overflow-hidden group hover-elevate">
                 <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 p-6 relative overflow-hidden">
-                  <img
-                    src={xt6Image}
-                    alt={`EVolution D-MAX XT6 6-Seat Golf Cart for ${location.name}`}
+                  <ResponsiveImage
+                    name="EVOLUTION_D-MAX_XT6_RED_1768250430374.png"
+                    alt={`Red EVolution D-MAX XT6 six-passenger 4X4 all terrain golf cart, delivered to ${location.name}`}
+                    sizes="(min-width: 768px) 45vw, 90vw"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
-                    data-testid="img-xt6-card"
+                    testId="img-xt6-card"
                   />
                 </div>
                 <div className="p-6 lg:p-8">
@@ -440,7 +285,7 @@ export default function LocationPage() {
                   <p className="text-muted-foreground mb-4">
                     Have more questions about 4X4 golf carts in {location.name}?
                   </p>
-                  <a href="tel:1-844-884-6744">
+                  <a href={SITE.phoneHref}>
                     <Button className="gap-2" data-testid="button-call-faq">
                       <Phone className="w-4 h-4" />
                       Call (844) 884-6744
@@ -558,7 +403,7 @@ export default function LocationPage() {
               get a personalized quote, or schedule a test drive in {location.name}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:1-844-884-6744">
+              <a href={SITE.phoneHref}>
                 <Button size="lg" variant="secondary" className="w-full sm:w-auto gap-2" data-testid="button-cta-call">
                   <Phone className="w-5 h-5" />
                   Call (844) 884-6744

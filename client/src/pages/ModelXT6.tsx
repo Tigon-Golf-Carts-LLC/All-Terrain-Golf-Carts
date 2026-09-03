@@ -5,7 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ColorSwatches } from "@/components/ColorSwatches";
 import { SpecTable } from "@/components/SpecTable";
-import { VehicleSchema } from "@/components/VehicleSchema";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { colorLabel } from "@/lib/colors";
+import { AnswerFirst } from "@/components/AnswerFirst";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { FaqSection } from "@/components/FaqSection";
+import { HOME_FAQS } from "@/data/faqs";
 import {
   ArrowRight,
   CheckCircle2,
@@ -21,27 +26,27 @@ import {
   Volume2,
   Download,
 } from "lucide-react";
-import xt6Red from "@assets/EVOLUTION_D-MAX_XT6_RED_1768250430374.png";
-import xt6White from "@assets/EVOLUTION_D-MAX_XT6_WHITE_1768251535645.png";
-import xt6Black from "@assets/EVOLUTION_D-MAX_XT6_BLACK_1768251535645.png";
-import xt6Blue from "@assets/EVOLUTION_D-MAX_XT6_BLUE_1768251535644.png";
-import xt6Gray from "@assets/EVOLUTION_D-MAX_XT6_GRAY_1768251535644.png";
-import xt6SkyBlue from "@assets/EVOLUTION_D-MAX_XT6_SKY_BLUE_1768251535644.png";
+const xt6Red = "EVOLUTION_D-MAX_XT6_RED_1768250430374.png";
+const xt6White = "EVOLUTION_D-MAX_XT6_WHITE_1768251535645.png";
+const xt6Black = "EVOLUTION_D-MAX_XT6_BLACK_1768251535645.png";
+const xt6Blue = "EVOLUTION_D-MAX_XT6_BLUE_1768251535644.png";
+const xt6Gray = "EVOLUTION_D-MAX_XT6_GRAY_1768251535644.png";
+const xt6SkyBlue = "EVOLUTION_D-MAX_XT6_SKY_BLUE_1768251535644.png";
 
-import featureTouchscreen from "@assets/10.1-INCH_MULTI-FUNCTIONAL_TOUCHSCREEN_XT6_1768315259915.jpg";
-import featureSpeakers from "@assets/Multicolor_LED_Lighted_Speakers_XT6_1768315259915.jpg";
-import feature4WD from "@assets/ON-DEMAND_4-WHEEL_DRIVE_XT6_1768315259914.jpg";
-import featureSteering from "@assets/Electric_Power_Steering_XT6_1768315259914.jpg";
-import featureCharging from "@assets/Dual_Wireless_Charging_Pad_XT6_1768315259914.jpg";
-import featureRefrigerator from "@assets/BUILT-IN_DASH_REFRIGERATOR_XT6_1768315259914.jpg";
-import featureBasket from "@assets/Foldable_REAR_STORAGE_BASKET_XT6_1768315259913.jpg";
-import featureCooler from "@assets/Sliding_Tray_with_Portable_Cooler_XT6_1768315259913.jpg";
-import featureTray from "@assets/Extended_Tray_with_Bag_Holder_Extension_XT6_1768315259913.jpg";
-import featureSeats from "@assets/TOP-NOTCH_LUXURY_SEATS_XT6_1768315259912.jpg";
-import featureComfort from "@assets/All-in-One_Passenger_Comfort_XT6_1768315259912.jpg";
-import featureLED from "@assets/LED_LIGHTING_XT6_1768315259912.jpg";
-import featureRunningBoard from "@assets/running_board_XT6_1768315259911.jpg";
-import featureWheels from "@assets/16x8.5_Aluminum_Wheel_24x10R16_Quiet_All-Terrain_Tires_XT6T_1768315259911.jpg";
+const featureTouchscreen = "10.1-INCH_MULTI-FUNCTIONAL_TOUCHSCREEN_XT6_1768315259915.jpg";
+const featureSpeakers = "Multicolor_LED_Lighted_Speakers_XT6_1768315259915.jpg";
+const feature4WD = "ON-DEMAND_4-WHEEL_DRIVE_XT6_1768315259914.jpg";
+const featureSteering = "Electric_Power_Steering_XT6_1768315259914.jpg";
+const featureCharging = "Dual_Wireless_Charging_Pad_XT6_1768315259914.jpg";
+const featureRefrigerator = "BUILT-IN_DASH_REFRIGERATOR_XT6_1768315259914.jpg";
+const featureBasket = "Foldable_REAR_STORAGE_BASKET_XT6_1768315259913.jpg";
+const featureCooler = "Sliding_Tray_with_Portable_Cooler_XT6_1768315259913.jpg";
+const featureTray = "Extended_Tray_with_Bag_Holder_Extension_XT6_1768315259913.jpg";
+const featureSeats = "TOP-NOTCH_LUXURY_SEATS_XT6_1768315259912.jpg";
+const featureComfort = "All-in-One_Passenger_Comfort_XT6_1768315259912.jpg";
+const featureLED = "LED_LIGHTING_XT6_1768315259912.jpg";
+const featureRunningBoard = "running_board_XT6_1768315259911.jpg";
+const featureWheels = "16x8.5_Aluminum_Wheel_24x10R16_Quiet_All-Terrain_Tires_XT6T_1768315259911.jpg";
 
 const colorImages: Record<string, string> = {
   white: xt6White,
@@ -172,18 +177,22 @@ export default function ModelXT6() {
 
   return (
     <>
-      <VehicleSchema model="xt6" />
-      <div className="min-h-screen pt-20">
+      <div className="min-h-screen pt-20 pb-24 lg:pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs path="/evolution-d-max-xt6" className="pt-6" />
+        </div>
         <section className="py-8 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-24 lg:z-50 lg:bg-background">
               <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 rounded-2xl p-4 lg:p-8 relative overflow-hidden">
-                <img
-                  src={colorImages[selectedColor]}
-                  alt={`EVolution D-MAX XT6 4X4 Golf Cart in ${selectedColor}`}
+                <ResponsiveImage
+                  name={colorImages[selectedColor]}
+                  alt={`${colorLabel(selectedColor)} EVolution D-MAX XT6 6-passenger 4X4 all terrain golf cart, new`}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority
                   className="w-full h-full object-contain transition-opacity duration-300"
-                  data-testid="img-xt6-main"
+                  testId="img-xt6-main"
                 />
               </div>
               <div className="mt-4 lg:mt-6">
@@ -204,6 +213,12 @@ export default function ModelXT6() {
               <p className="text-xl text-muted-foreground mb-6">
                 Maximum Capacity, Maximum Capability
               </p>
+
+              <AnswerFirst
+                question="What is the EVolution D-MAX XT6?"
+                answer="The EVolution D-MAX XT6 is a 6-passenger 4X4 all terrain golf cart. Selectable 4X2/4X4 drive runs two 6.3kW motors, a 48V lithium pack gives 30-50 miles per charge with a 160Ah upgrade available, and the LSV package makes it street legal to 25 MPH. From $17,595."
+                className="mb-6"
+              />
               
               <div className="flex items-baseline gap-2 mb-6">
                 <span className="text-sm text-muted-foreground">Starting at</span>
@@ -415,9 +430,10 @@ export default function ModelXT6() {
                 data-testid={`feature-card-${index}`}
               >
                 <div className="aspect-[16/9] overflow-hidden">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
+                  <ResponsiveImage
+                    name={feature.image}
+                    alt={`${feature.title} on the EVolution D-MAX XT6 all terrain golf cart`}
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -448,6 +464,8 @@ export default function ModelXT6() {
           </Link>
         </div>
       </section>
+
+      <FaqSection faqs={HOME_FAQS} heading="Common questions about all terrain golf carts" />
     </div>
     </>
   );

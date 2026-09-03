@@ -1,0 +1,83 @@
+name: Deploy to GitHub Pages
+
+# Three triggers:
+#   push to main      deploy whatever just landed
+#   schedule          refresh the inventory snapshot, since it is frozen at build time
+#   workflow_dispatch refresh on demand, without pushing a commit
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Every 6 hours. Inventory is baked into the HTML at build time, so this is
+    # what keeps a stale price or a sold-out configuration from lingering.
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time. A scheduled refresh must not race a push.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # "/" for a custom domain or <user>.github.io.
+  # "/All-Terrain-Golf-Carts/" for a project site.
+  BASE_PATH: "/"
+  # Bare domain, written to dist/CNAME on every build because Pages wipes it.
+  # Set to an empty string if you are not using a custom domain.
+  SITE_DOMAIN: "allterraingolfcarts.com"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run filter tests
+        run: npm test
+
+      - name: Fetch inventory snapshot
+        # Optional. With INVENTORY_FEED_URL unset, the snapshot is generated from
+        # the model catalog in client/src/data/models.ts. With it set, the feed is
+        # fetched and normalized, and the step fails loudly rather than writing an
+        # empty snapshot over the committed one.
+        env:
+          INVENTORY_FEED_URL: ${{ secrets.INVENTORY_FEED_URL }}
+          INVENTORY_FEED_TOKEN: ${{ secrets.INVENTORY_FEED_TOKEN }}
+        run: npm run fetch-data
+
+      - name: Build
+        run: npm run build:site
+
+      - name: Verify build
+        run: npm run verify
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
