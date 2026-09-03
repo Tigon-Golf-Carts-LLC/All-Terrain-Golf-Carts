@@ -1,11 +1,11 @@
-import heroSnow from "@assets/ALL_TERRAIN_GOLF_CARTS_(3)_1768408640430.jpg";
-import heroBeach from "@assets/ALL_TERRAIN_GOLF_CARTS_(4)_1768408640430.jpg";
-import heroForest from "@assets/ALL_TERRAIN_GOLF_CARTS_(5)_1768408640430.jpg";
-import heroMountain from "@assets/ALL_TERRAIN_GOLF_CARTS_(6)_1768408640431.jpg";
-import heroResort from "@assets/ALL_TERRAIN_GOLF_CARTS_(7)_1768408640431.jpg";
-import heroCamping from "@assets/ALL_TERRAIN_GOLF_CARTS_(8)_1768408640431.jpg";
-import heroLakeside from "@assets/ALL_TERRAIN_GOLF_CARTS_1768408640432.jpg";
-import heroFestival from "@assets/ALL_TERRAIN_GOLF_CARTS_(2)_1768408640432.jpg";
+const heroSnow = "ALL_TERRAIN_GOLF_CARTS_(3)_1768408640430.jpg";
+const heroBeach = "ALL_TERRAIN_GOLF_CARTS_(4)_1768408640430.jpg";
+const heroForest = "ALL_TERRAIN_GOLF_CARTS_(5)_1768408640430.jpg";
+const heroMountain = "ALL_TERRAIN_GOLF_CARTS_(6)_1768408640431.jpg";
+const heroResort = "ALL_TERRAIN_GOLF_CARTS_(7)_1768408640431.jpg";
+const heroCamping = "ALL_TERRAIN_GOLF_CARTS_(8)_1768408640431.jpg";
+const heroLakeside = "ALL_TERRAIN_GOLF_CARTS_1768408640432.jpg";
+const heroFestival = "ALL_TERRAIN_GOLF_CARTS_(2)_1768408640432.jpg";
 
 export interface BlogPost {
   id: number;

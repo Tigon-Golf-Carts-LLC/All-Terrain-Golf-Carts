@@ -1,72 +1,14 @@
-import { useLocation, Link } from "wouter";
+import { Link } from "wouter";
 import { getBlogPostBySlug, blogPosts } from "@/data/blogPosts";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Calendar, ArrowLeft, ArrowRight, Share2 } from "lucide-react";
-import { useEffect } from "react";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
 
-function BlogSchema({ post }: { post: NonNullable<ReturnType<typeof getBlogPostBySlug>> }) {
-  const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://allterraingolfcarts.com';
-  const imageUrl = post.heroImage.startsWith('http') ? post.heroImage : `${baseUrl}${post.heroImage}`;
-  
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "description": post.metaDescription,
-    "image": imageUrl,
-    "datePublished": post.publishDate,
-    "dateModified": post.publishDate,
-    "author": {
-      "@type": "Organization",
-      "name": "ALL Terrain Golf Carts",
-      "url": "https://allterraingolfcarts.com"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "ALL Terrain Golf Carts",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://allterraingolfcarts.com/logo.png"
-      }
-    },
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://allterraingolfcarts.com/blog/${post.slug}`
-    }
-  };
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-    />
-  );
-}
-
-export default function BlogPost() {
-  const [location] = useLocation();
-  const slug = location.replace("/blog/", "");
+export default function BlogPost({ slug }: { slug: string }) {
   const post = getBlogPostBySlug(slug);
 
-  useEffect(() => {
-    if (post) {
-      document.title = post.seoTitle;
-      const baseUrl = window.location.origin;
-      const imageUrl = post.heroImage.startsWith('http') ? post.heroImage : `${baseUrl}${post.heroImage}`;
-      
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute("content", post.metaDescription);
-      }
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute("content", post.seoTitle);
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      if (ogDescription) ogDescription.setAttribute("content", post.metaDescription);
-      const ogImage = document.querySelector('meta[property="og:image"]');
-      if (ogImage) ogImage.setAttribute("content", imageUrl);
-    }
-  }, [post]);
 
   if (!post) {
     return (
@@ -150,12 +92,16 @@ export default function BlogPost() {
 
   return (
     <>
-      <BlogSchema post={post} />
-      <article className="min-h-screen pt-20">
+      <article className="min-h-screen pt-20 pb-24 lg:pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs path={`/blog/${post.slug}`} className="pt-6 pb-4" />
+        </div>
         <div className="relative h-[40vh] min-h-[300px] lg:h-[50vh] overflow-hidden">
-          <img
-            src={post.heroImage}
+          <ResponsiveImage
+            name={post.heroImage}
             alt={post.heroAlt}
+            sizes="100vw"
+            priority
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
@@ -262,9 +208,10 @@ export default function BlogPost() {
                   <Link key={relatedPost.id} href={`/blog/${relatedPost.slug}`}>
                     <Card className="overflow-hidden hover-elevate cursor-pointer h-full" data-testid={`related-post-${relatedPost.id}`}>
                       <div className="aspect-[16/10] overflow-hidden">
-                        <img
-                          src={relatedPost.heroImage}
+                        <ResponsiveImage
+                          name={relatedPost.heroImage}
                           alt={relatedPost.heroAlt}
+                          sizes="(min-width: 1024px) 33vw, 100vw"
                           className="w-full h-full object-cover"
                         />
                       </div>

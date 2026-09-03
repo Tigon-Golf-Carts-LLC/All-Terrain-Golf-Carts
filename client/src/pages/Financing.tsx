@@ -1,7 +1,11 @@
-import { useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, CreditCard, DollarSign, CheckCircle, Percent, Clock, Shield } from "lucide-react";
+import { AnswerFirst } from "@/components/AnswerFirst";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { FaqSection } from "@/components/FaqSection";
+import { FINANCING_FAQS } from "@/data/faqs";
+import { SITE } from "@/config/site";
 
 const financingOptions = [
   {
@@ -61,43 +65,23 @@ const financingOptions = [
 ];
 
 export default function Financing() {
-  useEffect(() => {
-    document.title = "All Terrain Golf Cart Financing | 0% Financing Options | ALL Terrain Golf Carts";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Explore flexible financing options for all terrain golf carts. 0% financing available on EVolution D-MAX XT4 and XT6 4X4 electric golf carts. Quick approval, low APR, rent-to-own, and business financing solutions.");
-    }
-
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) {
-      ogTitle.setAttribute("content", "All Terrain Golf Cart Financing | 0% Financing Options");
-    }
-
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute("content", "Flexible financing for 4X4 all terrain golf carts. Multiple options including 0% APR, rent-to-own, and business financing.");
-    }
-
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) {
-      ogUrl.setAttribute("content", "https://allterraingolfcarts.com/financing");
-    }
-
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (canonical) {
-      canonical.setAttribute("href", "https://allterraingolfcarts.com/financing");
-    }
-  }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-24 lg:pb-8">
       <section className="pt-24 lg:pt-32 pb-16 lg:pb-24 bg-gradient-to-b from-primary/10 to-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs path="/financing" className="mb-6" />
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
             <span className="block">ALL TERRAIN</span>
             <span className="block text-primary">GOLF CARTS FINANCING</span>
           </h1>
+          <AnswerFirst
+            question="How do I finance an all terrain golf cart?"
+            answer="Financing an all terrain golf cart runs through six lenders offered here, covering prequalification with no credit impact, low-APR loans, rent-to-own, buy-now-pay-later and commercial fleet terms. Apply directly with whichever fits, or call (844) 884-6744 for a payment estimate first."
+            className="mx-auto mb-8 text-left"
+          />
           <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Get your dream 4X4 all terrain golf cart with flexible financing options. 
             0% financing available on EVolution D-MAX XT4 and XT6 models. 
@@ -281,7 +265,7 @@ export default function Financing() {
             EVolution D-MAX XT4 or XT6 4X4 electric golf cart. Questions? Call us anytime.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:1-844-884-6744">
+            <a href={SITE.phoneHref}>
               <Button size="lg" variant="secondary" className="gap-2" data-testid="button-financing-call">
                 Call (844) 884-6744
               </Button>
@@ -295,30 +279,7 @@ export default function Financing() {
         </div>
       </section>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FinancialProduct",
-          "name": "All Terrain Golf Cart Financing",
-          "description": "Flexible financing options for EVolution D-MAX 4X4 all terrain golf carts including 0% APR, rent-to-own, and business financing.",
-          "provider": {
-            "@type": "Organization",
-            "name": "ALL Terrain Golf Carts",
-            "url": "https://allterraingolfcarts.com",
-            "telephone": "1-844-884-6744"
-          },
-          "feesAndCommissionsSpecification": "0% APR available for qualified buyers. Terms and conditions apply.",
-          "interestRate": {
-            "@type": "QuantitativeValue",
-            "minValue": "0",
-            "unitText": "PERCENT"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "United States"
-          }
-        })
-      }} />
+      <FaqSection faqs={FINANCING_FAQS} heading="Financing questions" />
     </div>
   );
 }

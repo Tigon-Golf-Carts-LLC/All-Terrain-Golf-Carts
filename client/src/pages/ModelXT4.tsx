@@ -5,7 +5,12 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ColorSwatches } from "@/components/ColorSwatches";
 import { SpecTable } from "@/components/SpecTable";
-import { VehicleSchema } from "@/components/VehicleSchema";
+import { ResponsiveImage } from "@/components/ResponsiveImage";
+import { colorLabel } from "@/lib/colors";
+import { AnswerFirst } from "@/components/AnswerFirst";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { FaqSection } from "@/components/FaqSection";
+import { HOME_FAQS } from "@/data/faqs";
 import {
   ArrowRight,
   CheckCircle2,
@@ -25,27 +30,27 @@ import {
   Car,
   Download,
 } from "lucide-react";
-import xt4Red from "@assets/EVOLUTION_D-MAX_XT4_RED_1768250430375.png";
-import xt4White from "@assets/EVOLUTION_D-MAX_XT4_WHITE_1768251453734.png";
-import xt4Black from "@assets/EVOLUTION_D-MAX_XT4_BLACK_1768251453733.png";
-import xt4Blue from "@assets/EVOLUTION_D-MAX_XT4_BLUE_1768251453733.png";
-import xt4Gray from "@assets/EVOLUTION_D-MAX_XT4_GRAY_1768251453733.png";
-import xt4SkyBlue from "@assets/EVOLUTION_D-MAX_XT4_SKY_BLUE_1768251453732.png";
+const xt4Red = "EVOLUTION_D-MAX_XT4_RED_1768250430375.png";
+const xt4White = "EVOLUTION_D-MAX_XT4_WHITE_1768251453734.png";
+const xt4Black = "EVOLUTION_D-MAX_XT4_BLACK_1768251453733.png";
+const xt4Blue = "EVOLUTION_D-MAX_XT4_BLUE_1768251453733.png";
+const xt4Gray = "EVOLUTION_D-MAX_XT4_GRAY_1768251453733.png";
+const xt4SkyBlue = "EVOLUTION_D-MAX_XT4_SKY_BLUE_1768251453732.png";
 
-import featureTouchscreen from "@assets/10.1-INCH_MULTI-FUNCTIONAL_TOUCHSCREEN_XT4_1768315763571.jpg";
-import featureSpeakers from "@assets/Immersive_Surround_Sound_Experience_XT4_1768315763571.jpg";
-import feature4WD from "@assets/ON-DEMAND_4-WHEEL_DRIVE_XT4_1768315763571.jpg";
-import featureSteering from "@assets/Electric_Power_Steering_XT4_1768315763571.jpg";
-import featureCharging from "@assets/Dual_Wireless_Charging_Pad_XT4_1768315763571.jpg";
-import featureRefrigerator from "@assets/BUILT-IN_DASH_REFRIGERATOR_XT4_1768315763570.jpg";
-import featureBasket from "@assets/Foldable_Rear_storage_basket_XT4_1768315763570.jpg";
-import featureCooler from "@assets/Slide-out_Tray_&_Portable_Cooler_XT4_1768315763570.jpg";
-import featureTray from "@assets/Extended_Tray_with_Bag_Holder_Extension_XT4_1768315763570.jpg";
-import featureSeats from "@assets/Evolution_Iconic_Luxury_Seats_XT4_1768315763569.jpg";
-import featureComfort from "@assets/All-in-One_Passenger_Comfort_XT4_1768315763569.jpg";
-import featureLED from "@assets/LED_LIGHTING_XT4_1768315763569.jpg";
-import featureRunningBoard from "@assets/running_board_XT4_1768315763569.jpg";
-import featureWheels from "@assets/16X8.5_Aluminum_Wheels_XT4_1768315763568.jpg";
+const featureTouchscreen = "10.1-INCH_MULTI-FUNCTIONAL_TOUCHSCREEN_XT4_1768315763571.jpg";
+const featureSpeakers = "Immersive_Surround_Sound_Experience_XT4_1768315763571.jpg";
+const feature4WD = "ON-DEMAND_4-WHEEL_DRIVE_XT4_1768315763571.jpg";
+const featureSteering = "Electric_Power_Steering_XT4_1768315763571.jpg";
+const featureCharging = "Dual_Wireless_Charging_Pad_XT4_1768315763571.jpg";
+const featureRefrigerator = "BUILT-IN_DASH_REFRIGERATOR_XT4_1768315763570.jpg";
+const featureBasket = "Foldable_Rear_storage_basket_XT4_1768315763570.jpg";
+const featureCooler = "Slide-out_Tray_&_Portable_Cooler_XT4_1768315763570.jpg";
+const featureTray = "Extended_Tray_with_Bag_Holder_Extension_XT4_1768315763570.jpg";
+const featureSeats = "Evolution_Iconic_Luxury_Seats_XT4_1768315763569.jpg";
+const featureComfort = "All-in-One_Passenger_Comfort_XT4_1768315763569.jpg";
+const featureLED = "LED_LIGHTING_XT4_1768315763569.jpg";
+const featureRunningBoard = "running_board_XT4_1768315763569.jpg";
+const featureWheels = "16X8.5_Aluminum_Wheels_XT4_1768315763568.jpg";
 
 const colorImages: Record<string, string> = {
   white: xt4White,
@@ -190,18 +195,22 @@ export default function ModelXT4() {
 
   return (
     <>
-      <VehicleSchema model="xt4" />
-      <div className="min-h-screen pt-20">
+      <div className="min-h-screen pt-20 pb-24 lg:pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Breadcrumbs path="/evolution-d-max-xt4" className="pt-6" />
+        </div>
         <section className="py-8 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             <div className="lg:sticky lg:top-24 lg:z-50 lg:bg-background">
               <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 rounded-2xl p-4 lg:p-8 relative overflow-hidden">
-                <img
-                  src={colorImages[selectedColor]}
-                  alt={`EVolution D-MAX XT4 4X4 Golf Cart in ${selectedColor}`}
+                <ResponsiveImage
+                  name={colorImages[selectedColor]}
+                  alt={`${colorLabel(selectedColor)} EVolution D-MAX XT4 4-passenger 4X4 all terrain golf cart, new`}
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  priority
                   className="w-full h-full object-contain transition-opacity duration-300"
-                  data-testid="img-xt4-main"
+                  testId="img-xt4-main"
                 />
               </div>
               <div className="mt-4 lg:mt-6">
@@ -222,6 +231,12 @@ export default function ModelXT4() {
               <p className="text-xl text-muted-foreground mb-6">
                 The Ultimate All-Terrain Golf Cart
               </p>
+
+              <AnswerFirst
+                question="What is the EVolution D-MAX XT4?"
+                answer="The EVolution D-MAX XT4 is a 4-passenger 4X4 all terrain golf cart. Two independent 6.3kW motors drive all four wheels on demand for 12.6kW combined, a 48V lithium pack gives 40-50 miles per charge, and the LSV package makes it street legal to 25 MPH. From $15,595."
+                className="mb-6"
+              />
               
               <div className="flex items-baseline gap-2 mb-6">
                 <span className="text-sm text-muted-foreground">Starting at</span>
@@ -441,9 +456,10 @@ export default function ModelXT4() {
                 data-testid={`feature-card-${index}`}
               >
                 <div className="aspect-[16/9] overflow-hidden">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
+                  <ResponsiveImage
+                    name={feature.image}
+                    alt={`${feature.title} on the EVolution D-MAX XT4 all terrain golf cart`}
+                    sizes="(min-width: 768px) 50vw, 100vw"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -474,6 +490,8 @@ export default function ModelXT4() {
           </Link>
         </div>
       </section>
+
+      <FaqSection faqs={HOME_FAQS} heading="Common questions about all terrain golf carts" />
     </div>
     </>
   );
