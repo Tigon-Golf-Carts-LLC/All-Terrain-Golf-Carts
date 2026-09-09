@@ -13,7 +13,8 @@
  *   4. Size budgets, with the 20 largest files listed.
  *   5. No `localhost`, `/api/`, `replit` or secret name survives in the bundle.
  *   6. No broken internal link or image reference.
- *   7. Every sitemap URL resolves to a file, and no noindex page is listed.
+ *   7. The sitemap index lists every section sitemap, every sitemap URL and
+ *      image resolves to a file, and no noindex page is listed.
  *   8. JSON-LD parses on one page of each type.
  */
 
@@ -331,18 +332,65 @@ async function checkSitemap(routes: { path: string; indexable: boolean }[]) {
   section("7. Sitemap");
 
   const { resolveFile } = await import("./serve.ts");
-  const xml = await readFile(path.join(DIST, "sitemap.xml"), "utf-8");
-  const locs = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/g)).map((match) => match[1]);
 
-  console.log(`  ${locs.length} URLs listed`);
+  const locsIn = (xml: string, tag: "loc" | "image:loc"): string[] => {
+    // <loc> must not also match <image:loc>, which is a different element.
+    const pattern = tag === "loc" ? /(?<!image:)<loc>([^<]+)<\/loc>/g : /<image:loc>([^<]+)<\/image:loc>/g;
+    return Array.from(xml.matchAll(pattern)).map((match) => match[1]);
+  };
 
-  const unresolved: string[] = [];
-  for (const loc of locs) {
-    const pathname = new URL(loc).pathname;
-    if (!resolveFile(pathname)) unresolved.push(loc);
+  const indexXml = await readFile(path.join(DIST, "sitemap.xml"), "utf-8");
+
+  const isIndex = /<sitemapindex[\s>]/.test(indexXml);
+  console.log(`  ${isIndex ? "PASS" : "FAIL"}  sitemap.xml is a sitemap index`);
+  if (!isIndex) {
+    fail("sitemap.xml is not a sitemap index");
+    return;
   }
+
+  // Each child the index advertises must exist as a file in dist/.
+  const children = locsIn(indexXml, "loc").map((loc) => new URL(loc).pathname.replace(/^\//, ""));
+  const missingChildren = children.filter((name) => !existsSync(path.join(DIST, name)));
+  console.log(`  ${missingChildren.length === 0 ? "PASS" : "FAIL"}  all ${children.length} section sitemaps exist`);
+  for (const name of missingChildren) fail(`sitemap index lists a missing file: ${name}`);
+
+  // ...and no sitemap file may sit in dist/ unlisted, where nothing would crawl it.
+  const onDisk = (await readdir(DIST)).filter((name) => /^sitemap.*\.xml$/i.test(name) && name !== "sitemap.xml");
+  const orphans = onDisk.filter((name) => !children.includes(name));
+  console.log(`  ${orphans.length === 0 ? "PASS" : "FAIL"}  no sitemap file is missing from the index`);
+  for (const name of orphans) fail(`sitemap file not listed in the index: ${name}`);
+
+  const locs: string[] = [];
+  const images: string[] = [];
+  for (const name of children) {
+    const file = path.join(DIST, name);
+    if (!existsSync(file)) continue;
+    const xml = await readFile(file, "utf-8");
+    const childLocs = locsIn(xml, "loc");
+    const childImages = locsIn(xml, "image:loc");
+    console.log(`    ${name}: ${childLocs.length} URLs, ${childImages.length} images`);
+    locs.push(...childLocs);
+    images.push(...childImages);
+  }
+
+  console.log(`  ${locs.length} URLs and ${images.length} image references listed in total`);
+
+  const unresolved = locs.filter((loc) => !resolveFile(new URL(loc).pathname));
   console.log(`  ${unresolved.length === 0 ? "PASS" : "FAIL"}  every sitemap URL resolves to a file in dist/`);
   for (const loc of unresolved) fail(`sitemap URL does not resolve: ${loc}`);
+
+  // A URL listed under two sections would be submitted twice.
+  const duplicates = locs.filter((loc, i) => locs.indexOf(loc) !== i);
+  console.log(`  ${duplicates.length === 0 ? "PASS" : "FAIL"}  no URL is listed in more than one sitemap`);
+  for (const loc of new Set(duplicates)) fail(`URL listed in more than one sitemap: ${loc}`);
+
+  // An advertised image that 404s is a crawl error Google reports back.
+  const brokenImages = [...new Set(images)].filter((loc) => !resolveFile(new URL(loc).pathname));
+  console.log(
+    `  ${brokenImages.length === 0 ? "PASS" : "FAIL"}  every image URL resolves to a file in dist/ ` +
+      `(${new Set(images).size} unique)`,
+  );
+  for (const loc of brokenImages) fail(`sitemap image does not resolve: ${loc}`);
 
   const noindexPaths = routes.filter((route) => !route.indexable).map((route) => route.path);
   const leaked = locs.filter((loc) => {

@@ -2,10 +2,11 @@
  * The route registry.
  *
  * Every URL the site serves is declared here once, with its title, meta
- * description, canonical, schema type and indexability. `script/prerender.ts`
- * walks this list to emit one real `index.html` per route,
- * `script/generate-seo.ts` walks it to emit `sitemap.xml`, and the running app
- * reads it to update the document head on client-side navigation.
+ * description, canonical, schema type, indexability and sitemap section.
+ * `script/prerender.ts` walks this list to emit one real `index.html` per route,
+ * `script/generate-seo.ts` walks it to emit one sitemap per section plus the
+ * `sitemap.xml` index over them, and the running app reads it to update the
+ * document head on client-side navigation.
  *
  * One list means the sitemap can never disagree with what was prerendered, and a
  * `noindex` page can never leak into the sitemap.
@@ -21,6 +22,14 @@ import { FILTER_PRESETS } from "@/data/filterPresets";
 import { GUIDES } from "@/data/guides";
 
 const inventory = snapshot as unknown as InventorySnapshot;
+
+/**
+ * Which section sitemap a URL is listed in. `sitemap.xml` is a sitemap index
+ * over one file per section, so a section can grow past the 50,000-URL limit
+ * without the others being rewritten, and Search Console reports coverage per
+ * section rather than as one undifferentiated pile.
+ */
+export type SitemapSection = "pages" | "models" | "inventory" | "guides" | "blog" | "locations";
 
 export type SchemaType =
   | "WebPage"
@@ -46,13 +55,20 @@ export interface RouteMeta {
   schemaTypes: SchemaType[];
   /** Excluded from the sitemap and marked `noindex` when false. */
   indexable: boolean;
+  /** The section sitemap this URL is listed in. */
+  section: SitemapSection;
   /** ISO date for `lastmod` and `dateModified`. */
   lastmod: string;
   changefreq: "daily" | "weekly" | "monthly" | "yearly";
   priority: number;
   /** Breadcrumb trail, root first. The last entry is the current page. */
   breadcrumbs: { name: string; path: string }[];
-  /** Images to advertise in the sitemap for this URL. */
+  /**
+   * Extra images to advertise in the sitemap for this URL. The generator already
+   * harvests every image the prerendered page renders, so this is only for
+   * images markup cannot express; listing one here that is on the page anyway is
+   * deduplicated rather than emitted twice.
+   */
   images?: string[];
   /**
    * The image that is this page's Largest Contentful Paint, as a manifest key.
@@ -70,6 +86,13 @@ export interface RouteMeta {
   preloadBackdrop?: { name: string; width: number };
   ogType?: "website" | "article" | "product";
 }
+
+/**
+ * A route as each group below declares it. The sitemap section is attached in
+ * one place, where the registry is assembled, so a group cannot be filed under
+ * the wrong section or silently miss one.
+ */
+type RouteDraft = Omit<RouteMeta, "section">;
 
 const SNAPSHOT_DATE = inventory.updatedAt.slice(0, 10);
 /** Decorative hero backdrop shared by the home page and every service-area page. */
@@ -121,7 +144,7 @@ function clampDescription(description: string): string {
  * Static pages
  * ------------------------------------------------------------------ */
 
-const staticRoutes: RouteMeta[] = [
+const staticRoutes: RouteDraft[] = [
   {
     path: "/",
     title: "All Terrain Golf Carts | 4X4 Electric Carts",
@@ -216,7 +239,7 @@ const staticRoutes: RouteMeta[] = [
  * Model pages
  * ------------------------------------------------------------------ */
 
-const modelRoutes: RouteMeta[] = models.map((model) => ({
+const modelRoutes: RouteDraft[] = models.map((model) => ({
   path: model.path,
   title: `${model.name} | ${model.seats}-Seat 4X4 Cart`,
   description: `${model.name}: ${model.seats}-passenger 4X4 all terrain golf cart with dual ${model.motorKw}kW motors, ${model.rangeMilesMin}-${model.rangeMilesMax} mile range and LSV street-legal package. From $${model.price.toLocaleString("en-US")}.`,
@@ -237,7 +260,7 @@ const modelRoutes: RouteMeta[] = models.map((model) => ({
  * Prerendered filter pages
  * ------------------------------------------------------------------ */
 
-const presetRoutes: RouteMeta[] = FILTER_PRESETS.map((preset) => ({
+const presetRoutes: RouteDraft[] = FILTER_PRESETS.map((preset) => ({
   path: `/inventory/${preset.slug}`,
   title: preset.title,
   description: preset.description,
@@ -260,7 +283,7 @@ const presetRoutes: RouteMeta[] = FILTER_PRESETS.map((preset) => ({
  * Inventory detail pages
  * ------------------------------------------------------------------ */
 
-const inventoryRoutes: RouteMeta[] = inventory.items.map((item) => ({
+const inventoryRoutes: RouteDraft[] = inventory.items.map((item) => ({
   path: `/inventory/${item.slug}`,
   title: `${item.year} ${item.modelName} ${item.colorName}`,
   description: `${item.condition === "new" ? "New" : "Used"} ${item.colorName.toLowerCase()} ${item.year} ${item.modelName}: ${item.seats}-passenger ${item.drive.toUpperCase()} all terrain golf cart, $${item.price.toLocaleString("en-US")}. Call (844) 884-6744.`,
@@ -285,7 +308,7 @@ const inventoryRoutes: RouteMeta[] = inventory.items.map((item) => ({
  * Guides (the topic cluster around the pillar page)
  * ------------------------------------------------------------------ */
 
-const guideRoutes: RouteMeta[] = GUIDES.map((guide) => ({
+const guideRoutes: RouteDraft[] = GUIDES.map((guide) => ({
   path: `/guides/${guide.slug}`,
   title: guide.seoTitle,
   description: guide.metaDescription,
@@ -302,7 +325,7 @@ const guideRoutes: RouteMeta[] = GUIDES.map((guide) => ({
   ogType: "article",
 }));
 
-const guideIndexRoute: RouteMeta = {
+const guideIndexRoute: RouteDraft = {
   path: "/guides",
   title: "All Terrain Golf Cart Buying Guides",
   description:
@@ -321,7 +344,7 @@ const guideIndexRoute: RouteMeta = {
  * Blog posts
  * ------------------------------------------------------------------ */
 
-const blogRoutes: RouteMeta[] = blogPosts.map((post) => ({
+const blogRoutes: RouteDraft[] = blogPosts.map((post) => ({
   path: `/blog/${post.slug}`,
   title: post.seoTitle,
   description: post.metaDescription,
@@ -342,7 +365,7 @@ const blogRoutes: RouteMeta[] = blogPosts.map((post) => ({
  * Service-area pages
  * ------------------------------------------------------------------ */
 
-const locationRoutes: RouteMeta[] = locations.map((location) => ({
+const locationRoutes: RouteDraft[] = locations.map((location) => ({
   path: `/${location.slug}`,
   title: `${location.name} All Terrain Golf Carts`,
   description: `4X4 all terrain golf carts delivered to ${location.name}: street-legal LSV rules, popular uses in ${location.majorCities.slice(0, 2).join(" and ")}, and D-MAX XT4/XT6 pricing.`,
@@ -367,15 +390,19 @@ const locationRoutes: RouteMeta[] = locations.map((location) => ({
  * The registry
  * ------------------------------------------------------------------ */
 
+function inSection(section: SitemapSection, drafts: RouteDraft[]): RouteMeta[] {
+  return drafts.map((route) => ({ ...route, section }));
+}
+
 export const routes: RouteMeta[] = [
-  ...staticRoutes,
-  guideIndexRoute,
-  ...modelRoutes,
-  ...presetRoutes,
-  ...inventoryRoutes,
-  ...guideRoutes,
-  ...blogRoutes,
-  ...locationRoutes,
+  // Section hubs (/blog, /guides, /service-areas) sit with the other top-level
+  // pages; the entries they link to are grouped under their own section.
+  ...inSection("pages", [...staticRoutes, guideIndexRoute]),
+  ...inSection("models", modelRoutes),
+  ...inSection("inventory", [...presetRoutes, ...inventoryRoutes]),
+  ...inSection("guides", guideRoutes),
+  ...inSection("blog", blogRoutes),
+  ...inSection("locations", locationRoutes),
 ].map((route) => ({
   ...route,
   title: clampTitle(route.title),
@@ -403,6 +430,7 @@ export const notFoundMeta: RouteMeta = {
   canonical: absoluteUrl("/404/"),
   schemaTypes: ["WebPage"],
   indexable: false,
+  section: "pages",
   lastmod: SNAPSHOT_DATE,
   changefreq: "yearly",
   priority: 0.1,

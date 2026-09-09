@@ -29,7 +29,7 @@ npm run verify       # verify the built dist/
 | `build` | `fetch-data` → `optimize-assets` → `vite build` → `prerender` → `generate-seo` |
 | `build:site` | Same, skipping the network fetch (uses the committed snapshot) |
 | `prerender` | Renders every route to `dist/<route>/index.html` |
-| `generate-seo` | Writes `dist/sitemap.xml` and `dist/robots.txt` |
+| `generate-seo` | Writes the sitemap index, one sitemap per section, and `dist/robots.txt` |
 | `preview` / `serve` | Serve `dist/` locally with Pages-like path resolution and compression |
 | `test` | Vitest suite for the filter engine |
 | `verify` | Static verification of `dist/` (files, links, sitemap, JSON-LD, budgets) |
@@ -90,9 +90,42 @@ client/src/
 ```
 
 `seo/routes.ts` is the spine. The prerenderer walks it to decide what to render,
-`generate-seo.ts` walks it to build the sitemap, and the running app reads it to
+`generate-seo.ts` walks it to build the sitemaps, and the running app reads it to
 update the head on navigation. A page cannot be prerendered without being in the
 sitemap, and a `noindex` page cannot leak into it.
+
+## Sitemaps
+
+`dist/sitemap.xml` is a **sitemap index**. It is the only URL to submit to Google
+Search Console (Sitemaps → add `https://allterraingolfcarts.com/sitemap.xml`);
+Google follows it to every section sitemap on its own, and `robots.txt` points at
+it for every other crawler.
+
+| File | Contents |
+| --- | --- |
+| `sitemap.xml` | The index: one entry per file below |
+| `sitemap-pages.xml` | Home and the top-level pages, including the section hubs |
+| `sitemap-models.xml` | The model pages |
+| `sitemap-inventory.xml` | Prerendered filter pages and inventory detail pages |
+| `sitemap-guides.xml` | The guide cluster |
+| `sitemap-blog.xml` | Blog posts |
+| `sitemap-locations.xml` | The 50 states plus districts and territories |
+
+Each route's `section` field in `seo/routes.ts` decides which file it lands in, so
+a URL is listed exactly once. Splitting by section means a section can grow past
+the 50,000-URL limit without rewriting the others, and Search Console reports
+indexing coverage per section rather than as one undifferentiated pile.
+
+Image entries are **harvested from the prerendered HTML**, not curated by hand:
+the generator reads each page's `<img src>` and CSS `background-image` and lists
+what the page actually renders, deduplicated so one picture is never advertised at
+two widths. Add an image to a page and it appears in the sitemap on the next
+build, with no list to keep in sync. The optional `images` field on a route only
+supplements that, for anything the markup cannot express.
+
+`npm run verify` fails the build if the index and the section files disagree, if a
+sitemap file in `dist/` is not listed in the index, if a URL appears in more than
+one section, or if any page or image URL does not resolve to a real file.
 
 ## Inventory freshness
 
